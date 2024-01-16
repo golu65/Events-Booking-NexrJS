@@ -1,0 +1,658 @@
+.MainBoxTwo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 40px;
+    background: rgb(8, 8, 16);
+}
+
+@media (min-width: 1000px) and (max-width: 1350px) {
+    .MainBoxTwo {
+        /* border: 1px solid red; */
+    }
+}
+
+@media (max-width: 767px) {
+    .MainBoxTwo {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /* // border: 2px solid red; */
+        padding-top: 1px;
+        box-sizing: border-box;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .MainBoxTwo {
+        /* // width: 100%; */
+        /* // padding: 20px; */
+    }
+}
+
+
+.SecondBoxOne {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondBoxOne {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .SecondBoxOne {
+        width: 100%;
+        display: block;
+        /* // border: 2px solid red; */
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondBoxOne {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.LookBox {
+    margin-right: auto;
+    align-self: stretch;
+    width: 512px;
+}
+
+
+@media (max-width: 767px) {
+    .LookBox {
+        width: 100%;
+        overflow: hidden;
+        /* // border: 2px solid red; */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .LookBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.LookingText {
+    color: #fff;
+    font-family: Haffer SQ TRIAL;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: auto;
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .LookingText {
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .LookingText {
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        align-self: stretch;
+        margin: 10px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .LookingText {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.LookBoxSec {
+    width: 570px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+
+@media (max-width: 767px) {
+    .LookBoxSec {
+        width: 100%;
+        padding-top: 10px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .LookBoxSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.RecoText {
+    color: #fff;
+    font-family: Haffer SQ TRIAL;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .RecoText {
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: auto;
+        width: 88%;
+    }
+}
+
+@media (max-width: 767px) {
+    .RecoText {
+        opacity: 0.65;
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 10px;
+        align-self: stretch;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .RecoText {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.ThirdBoxTwo {
+    width: 100%;
+    height: 850px;
+    display: flex;
+    margin: auto;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .ThirdBoxTwo {
+        width: 80%;
+        /* // padding: 20px; */
+    }
+}
+
+@media (max-width: 767px) {
+    .ThirdBoxTwo {
+        display: block;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ThirdBoxTwo {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondFirstBox {
+    width: 750.541px;
+    height: 836.75px;
+    margin-top: 0%;
+    margin-left: -280px;
+
+    border-radius: 600px 0px 0px 0px;
+
+    border-left: 1px solid rgb(255 255 255 / 20%);
+    border-bottom: 1px solid rgb(255 255 255 / 2%);
+    /* // border-top: 1px solid rgb(255 255 255 / 14%); */
+    background: linear-gradient(139deg,
+            rgba(255, 253, 253, 0.04) -5.5%,
+            rgba(255, 227, 226, 0.1) -5.5%,
+            rgba(48, 15, 27, 0.1) 38.24%,
+            rgba(21, 18, 18, 0.1) 99.39%);
+    backdrop-filter: blur(73.14035034179688px);
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondFirstBox {
+        width: 80%;
+        width: 630.541px;
+        height: 696.75px;
+        margin: 90px;
+
+        margin-left: -270px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondFirstBox {
+        width: 89%;
+        height: 408px;
+        border-radius: 210px 0px 0px 0px;
+        margin-top: -80%;
+        margin-left: 35px;
+        /* // border: 2px solid red; */
+        border-left: 1px solid rgb(255 255 255 / 20%);
+        border-bottom: 1px solid rgb(255 255 255 / 2%);
+        /* // border-top: 1px solid rgb(255 255 255 / 14%); */
+        background: linear-gradient(139deg,
+                rgba(255, 253, 253, 0.04) -5.5%,
+                rgba(255, 227, 226, 0.1) -5.5%,
+                rgba(48, 15, 27, 0.1) 38.24%,
+                rgba(21, 18, 18, 0.1) 99.39%);
+        backdrop-filter: blur(73.14035034179688px);
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondFirstBox {
+        /* // width: 100%;
+    // padding: 20px; */
+    }
+}
+
+.FirstOneBox {
+    width: 406px;
+    height: 438px;
+    margin-top: 399px;
+    /* // border: 10px solid red; */
+    border-radius: 0px 800px 0px 0px;
+    background: linear-gradient(203deg,
+            rgba(255, 119, 76, 0.72) -0.41%,
+            rgba(221, 75, 154, 0.72) 43.59%,
+            rgba(31, 31, 31, 0) 88.94%);
+    backdrop-filter: blur(24.53516387939453px);
+
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstOneBox {
+        width: 500px;
+        height: 498px;
+        margin-top: 289px;
+        margin-left: -300px;
+        /* // border: 10px solid red; */
+        border-radius: 0px 800px 0px 0px;
+        background: linear-gradient(203deg,
+                rgba(255, 119, 76, 0.72) -0.41%,
+                rgba(221, 75, 154, 0.72) 43.59%,
+                rgba(31, 31, 31, 0) 88.94%);
+        backdrop-filter: blur(24.53516387939453px);
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstOneBox {
+        width: 40%;
+        height: 350px;
+        margin-top: 49px;
+        border-radius: 0px 400px 0px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstOneBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.PerfectBox {
+    margin-left: 24%;
+    margin-top: 35%;
+    width: 72%;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .PerfectBox {
+        margin-left: 24%;
+        margin-top: 40%;
+    }
+}
+
+@media (max-width: 767px) {
+    .PerfectBox {
+        margin: auto;
+        width: 90%;
+        margin: auto;
+        /* // border: 1px solid red; */
+        padding-top: 13rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .PerfectBox {
+        /* // width: 100%;
+    // padding: 20px; */
+    }
+}
+
+.PerfectText {
+    color: #fff;
+    font-family: Haffer SQ TRIAL;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .PerfectText {
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 767px) {
+    .PerfectText {
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .PerfectText {
+        /* // width: 100%;
+    // padding: 20px; */
+    }
+}
+
+.ArijitText {
+    color: #fff;
+    font-family: Haffer SQ TRIAL;
+    font-size: 31.029px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+@media (max-width: 767px) {
+    .ArijitText {
+        color: #fff;
+        font-family: Haffer SQ TRIAL;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ArijitText {
+        /* // width: 100%;
+    // padding: 20px; */
+    }
+}
+
+.FourBoxOne {
+    margin: auto;
+    width: 564.541px;
+    height: 836.75px;
+    flex-shrink: 0;
+    /* // border: 1px solid red; */
+    border-radius: 0px 195px;
+    background: var(--new-bright,
+            linear-gradient(133deg,
+                rgba(255, 253, 253, 0.36) -5.44%,
+                rgba(255, 227, 226, 0.8) -5.44%,
+                rgba(241, 102, 51, 0.8) 26.17%,
+                rgba(253, 45, 125, 0.8) 64.16%,
+                rgba(21, 18, 18, 0.8) 101.18%));
+    position: relative;
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FourBoxOne {
+        /* // border: 1px solid red; */
+        width: 480px;
+        height: 688.75px;
+        margin: auto;
+        margin-top: 89px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FourBoxOne {
+        width: 270.738px;
+        height: 414.201px;
+        margin: auto;
+        margin-top: 55px;
+        border-radius: 38.508px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FourBoxOne {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.ArtistCircleBox {
+    width: 534px;
+    height: 812px;
+    flex-shrink: 0;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 0px 195px;
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.66) 0%,
+            rgba(0, 0, 0, 0.66) 100%),
+        url(../.../../../../public/Image/slider1.png),
+        lightgray -23.938px -81.072px / 104.483% 119.968% no-repeat;
+    backdrop-filter: blur(27.68790626525879px);
+}
+
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .ArtistCircleBox {
+        /* // border: 2px solid red; */
+        width: 460px;
+        height: 668.75px;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ArtistCircleBox {
+        width: 270.738px;
+        height: 414.201px;
+        margin: auto;
+        margin-top: 0px;
+        border-radius: 38.508px;
+        background: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.66) 0%,
+                rgba(0, 0, 0, 0.66) 100%),
+            url(../.../../../../public/Image/slider1.png),
+            lightgray -23.938px -81.072px / 104.483% 119.968% no-repeat;
+        backdrop-filter: blur(27.68790626525879px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ArtistCircleBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.CirculBox {
+    width: 256.533px;
+    height: 256.533px;
+    flex-shrink: 0;
+    fill: var(--dark-shade,
+            linear-gradient(100deg, #1f1f1f 9.56%, #3c3c3c 49.08%, #232323 93.32%));
+    background: rgba(58, 58, 58);
+    backdrop-filter: blur(47.40337371826172px);
+    border-radius: 50%;
+    position: absolute;
+    top: calc(84% - 100px);
+    left: calc(10% - 107px);
+    border: 0px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+@media (max-width: 767px) {
+    .CirculBox {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .CirculBox {
+        display: none;
+    }
+}
+
+.CirclleSecBox {
+    width: 240.597px;
+    height: 240.597px;
+    border: 1px solid rgb(245 245 245 / 30%);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin: auto;
+    margin-top: 7.5px;
+}
+
+@media (max-width: 767px) {
+    .CirclleSecBox {
+        width: 135.597px;
+        height: 135.597px;
+        border: 1px solid rgb(245 245 245 / 30%);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin: auto;
+        margin-top: 6px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .CirclleSecBox {
+        width: 80%;
+        padding: 20px;
+    }
+}
+
+.CirclleThirdBox {
+    width: 200.23px;
+    height: 200.23px;
+    flex-shrink: 0;
+    border: 1px solid rgb(245 245 245 / 30%);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin: auto;
+    margin-top: 19px;
+}
+
+@media (max-width: 767px) {
+    .CirclleThirdBox {
+        width: 102.23px;
+        height: 102.23px;
+        flex-shrink: 0;
+        border: 1px solid rgb(245 245 245 / 30%);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin: auto;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .CirclleThirdBox {
+        width: 80%;
+        padding: 20px;
+    }
+}
+
+.containerStyleCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    width: 170px;
+}
+
+.YearOne{
+    font-size: 4px;
+}
+
+
+.CircleText{
+    text-align: center;
+    font-family: Haffer SQ TRIAL;
+    font-size: 27.413px;
+    font-style: normal;
+    margin-top: -7rem;
+    /* // margin-right: 1rem; */
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(
+      140deg,
+      rgba(255, 253, 253, 0.4) 1.21%,
+      rgba(255, 227, 226, 0.9) 1.21%,
+      rgba(255, 121, 112, 0.9) 35.58%,
+      rgba(248, 86, 148, 0.9) 67.87%,
+      rgba(21, 18, 18, 0.9) 111.28%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

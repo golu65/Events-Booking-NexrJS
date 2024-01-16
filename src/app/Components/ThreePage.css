@@ -1,0 +1,1044 @@
+.MainBoxThree {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    background: rgb(8, 8, 16);
+    overflow: hidden;
+}
+
+
+@media (max-width: 767px) {
+    .MainBoxThree {
+        width: 100%;
+        height: 550px;
+        /* // overflow: hidden; */
+        /* // border: 2px solid red; */
+        padding-top: 1px;
+        padding-bottom: 50px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .MainBoxThree {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondBoxThree {
+    width: 70%;
+    height: 100%;
+    /* // border: 2px solid red; */
+    margin: auto;
+    padding-top: 18px;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondBoxThree {
+        width: 79%;
+    }
+}
+
+.ArtitstBoxThree {
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .ArtitstBoxThree {
+        gap: 10px;
+        max-width: 100%;
+        margin: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ArtitstBoxThree {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.FirstArtitstBox {
+    align-items: center;
+    border-radius: 877.443px 877.443px 0px 877.443px;
+    border: 1.899px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 7.59559px 136.72055px 0px rgba(0, 0, 0, 0.8) inset;
+    width: 317.116px;
+    height: 317.116px;
+    background: url(../../../public/Image/ArtistOne.png), black 50% / cover no-repeat;
+    margin: 10px;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstArtitstBox {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstArtitstBox {
+        width: 124.009px;
+        height: 124.17px;
+        margin: 0px;
+        border-radius: 462.08px 462.08px 0px 462.08px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 72px 0px rgba(0, 0, 0, 0.8) inset;
+        background: url(../../../public/Image/ArtistOne.png), lightgray 50% / cover no-repeat;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstArtitstBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondArtitsBox {
+    width: 317.116px;
+    height: 317.116px;
+    padding-right: 0px;
+    align-items: center;
+    background: url(../../../public/Image/ArtitsSec.png), black 50% / cover no-repeat;
+    border-radius: 14.281px;
+    border: 1.899px solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+    box-shadow: 18.98897px 36.07904px 100.64152px 0px rgba(0, 0, 0, 0.25) inset;
+
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondArtitsBox {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondArtitsBox {
+        width: 124.009px;
+        height: 124.17px;
+        margin: 5px;
+        border-radius: 7.521px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 10px 19px 53px 0px rgba(0, 0, 0, 0.25) inset;
+        background: url(../../../public/Image/arijitmobile.png), lightgray 50% / cover no-repeat;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondArtitsBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.FirstArtitstBoxSec {
+    align-items: center;
+    border-radius: 877.443px 877.443px 0px 877.443px;
+    border: 1.899px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 7.59559px 136.72055px 0px rgba(0, 0, 0, 0.8) inset;
+    width: 317.116px;
+    height: 317.116px;
+    background: url(../../../public/Image/ArtistOne.png), black 50% / cover no-repeat;
+    margin: 10px;
+}
+
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstArtitstBoxSec {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstArtitstBoxSec {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstArtitstBoxSec {
+        width: 100%;
+
+        padding: 20px;
+    }
+}
+
+.SecondArtitsBoxSec {
+    width: 317.116px;
+    height: 317.116px;
+    padding-right: 0px;
+    align-items: center;
+    background: url(../../../public/Image/ArtitsSec.png), black 50% / cover no-repeat;
+    border-radius: 14.281px;
+    border: 1.899px solid rgba(255, 255, 255, 0.2);
+    margin: auto;
+    box-shadow: 18.98897px 36.07904px 100.64152px 0px rgba(0, 0, 0, 0.25) inset;
+
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondArtitsBoxSec {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondArtitsBoxSec {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondArtitsBoxSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecArtitsBox {
+    display: flex;
+    margin: 10px;
+    opacity: 0.4;
+    /* // border: 1px solid red; */
+}
+
+
+@media (max-width: 767px) {
+    .SecArtitsBox {}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecArtitsBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.FirstSecBox {
+    align-items: center;
+    border-radius: 14.276px;
+    border: 1.898px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 317.116px;
+    height: 317.116px;
+    background: url(../../../public/Image/SecOne.png), black 50% / cover no-repeat;
+    margin: 5px;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstSecBox {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstSecBox {
+        width: 124.009px;
+        height: 124.17px;
+        margin: 5px;
+        border-radius: 7.521px;
+        box-shadow: 10px 19px 53px 0px rgba(0, 0, 0, 0.25) inset;
+        background: url(../../../public/Image/mobilesec.png), lightgray 50% / cover no-repeat;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstSecBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondSecBox {
+    width: 317.116px;
+    height: 317.116px;
+    margin: 5px;
+    padding-right: 0px;
+    align-items: center;
+    border-radius: 0px 151.856px 0px 0px;
+    border: 1.898px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 39.51%,
+            rgba(0, 0, 0, 0.9) 96.63%),
+        url(../../../public/Image/SecSec.png), black 90% / cover no-repeat;
+
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondSecBox {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondSecBox {
+        width: 124.009px;
+        height: 124.17px;
+        margin: auto;
+        border-radius: 0px 80px 0px 0px;
+        box-shadow: 10px 19px 53px 0px rgba(0, 0, 0, 0.25) inset;
+        background: url(../../../public/Image/mobilezakeer.png), lightgray 50% / cover no-repeat;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondSecBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.FirstSecBoxSec {
+    align-items: center;
+    border-radius: 14.276px;
+    border: 1.898px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 317.116px;
+    height: 317.116px;
+    background: url(../../../public/Image/SecOne.png), black 50% / cover no-repeat;
+    margin: 5px;
+}
+
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstSecBoxSec {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstSecBoxSec {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstSecBoxSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondSecBoxSec {
+    width: 317.116px;
+    height: 317.116px;
+    margin: 5px;
+    padding-right: 0px;
+    align-items: center;
+    border-radius: 0px 151.856px 0px 0px;
+    border: 1.898px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) 39.51%,
+            rgba(0, 0, 0, 0.9) 96.63%),
+        url(../../../public/Image/SecSec.png), black 90% / cover no-repeat;
+
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondSecBoxSec {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondSecBoxSec {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondSecBoxSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.ThirdArtitsBox {
+    display: flex;
+    margin: 10px;
+    opacity: 0.9;
+}
+
+
+@media (max-width: 767px) {
+    .ThirdArtitsBox {
+        margin: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ThirdArtitsBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.FirstThirdBox {
+    width: 317.116px;
+    height: 317.116px;
+    padding: 2.86px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    opacity: 0.2;
+    position: absloute;
+    border-radius: 759.281px 0px 0px 759.281px;
+    /* // border: 1.898px solid rgba(255, 255, 255, 0.2); */
+    background-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    background: url(../../../public/Image/ThirdOne.png), black 90% / cover no-repeat;
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstThirdBox {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstThirdBox {
+        width: 124.009px;
+        height: 124.17px;
+        margin: 5px;
+        border-radius: 759.281px 0px 0px 759.281px;
+        box-shadow: 10px 19px 53px 0px rgba(0, 0, 0, 0.25) inset;
+        background: url(../../../public/Image/ThirdOne.png), lightgray 10% / cover no-repeat;
+        background-size: cover;
+        /* Scale the image to cover the entire box */
+        background-position: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstThirdBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondThirdBox {
+    width: 317.116px;
+    height: 317.116px;
+    padding-top: 0px;
+    margin: auto;
+    align-items: center;
+    opacity: 0.1;
+    border-radius: 1518.563px;
+    /* //   border: 1.898px solid rgba(255, 255, 255, 0.2); */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    background: url(../../../public/Image/ThirdSec.png), black 50% / cover no-repeat;
+
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondThirdBox {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondThirdBox {
+        width: 124.009px;
+        height: 124.17px;
+        margin: auto;
+        border-radius: 1518.563px;
+        box-shadow: 10px 19px 53px 0px rgba(0, 0, 0, 0.25) inset;
+        background: url(../../../public/Image/ThirdSec.png), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        /* Scale the image to cover the entire box */
+        background-position: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondThirdBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.FirstThirdBoxSec {
+    width: 317.116px;
+    height: 317.116px;
+    padding: 2.86px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    opacity: 0.1;
+    border-radius: 759.281px 0px 0px 759.281px;
+    /* //   border: 1.898px solid rgba(255, 255, 255, 0.2); */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    background: url(../../../public/Image/ThirdOne.png), black 90% / cover no-repeat;
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .FirstThirdBoxSec {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FirstThirdBoxSec {
+        width: 0px;
+        height: 0px;
+
+        /* // margin: 5px;
+    // border-radius: 759.281px 0px 0px 759.281px;
+    // box-shadow: 10px 19px 53px 0px rgba(0, 0, 0, 0.25) inset;
+    // background: url(../../../public/Image/ThirdOne.png), lightgray 10% / cover no-repeat;
+    // background-size: cover; /* Scale the image to cover the entire box */
+        /* background-position: center; */
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .FirstThirdBoxSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SecondThirdBoxSec {
+    width: 317.116px;
+    height: 317.116px;
+    padding-top: 0px;
+    margin: auto;
+    align-items: center;
+    opacity: 0.1;
+    border-radius: 1518.563px;
+    /* //   border: 1.898px solid rgba(255, 255, 255, 0.2); */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 18.98204px 36.06587px 100.60479px 0px rgba(0, 0, 0, 0.25) inset;
+    background: url(../../../public/Image/ThirdSec.png), black 50% / cover no-repeat;
+
+}
+
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SecondThirdBoxSec {
+        width: 295.116px;
+        height: 280.116px;
+    }
+}
+
+@media (max-width: 767px) {
+    .SecondThirdBoxSec {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SecondThirdBoxSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.FourBoxOneThree {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .FourBoxOneThree {
+        /* // padding: 0px 10px;
+    // border: 1px solid red; */
+        height: 0%;
+        margin: auto;
+    }
+}
+
+
+.TextBox {
+    display: flex;
+    padding: 56px 96px;
+    justify-content: space-between;
+    opacity: 0.6;
+    margin-top: -25.5%;
+}
+
+@media (max-width: 767px) {
+    .TextBox {
+        padding: 0px 10px;
+        /* // border: 1px solid red; */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .TextBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.TextFild {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+@media (max-width: 767px) {
+    .TextFild {
+        gap: 0px;
+        /* // border: 1px solid red; */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .TextFild {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.ThousendText {
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Haffer SQ TRIAL;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(180deg,
+            #fff 0%,
+            rgba(229, 228, 228, 0.85) 66.11%,
+            rgba(101, 99, 99, 0) 117.53%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(3.4076030254364014px);
+
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .ThousendText {
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Haffer SQ TRIAL;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: linear-gradient(180deg,
+                #fff 0%,
+                rgba(229, 228, 228, 0.85) 66.11%,
+                rgba(101, 99, 99, 0) 117.53%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        backdrop-filter: blur(3.4076030254364014px);
+    }
+}
+
+@media (max-width: 767px) {
+    .ThousendText {
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Haffer SQ TRIAL;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: linear-gradient(180deg,
+                #fff 0%,
+                rgba(229, 228, 228, 0.85) 66.11%,
+                rgba(101, 99, 99, 0) 110.53%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        backdrop-filter: blur(1.4076030254364014px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ThousendText {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.CelebritText {
+    color: white;
+    margin-top: -35px;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Haffer SQ TRIAL;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    /* // color: rgba(0, 0, 0, 1); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* // -webkit-text-fill-color: transparent; */
+    /* // backdrop-filter: blur(3.4076030254364014px); */
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .CelebritText {
+        margin-top: -35px;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Haffer SQ TRIAL;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        background: linear-gradient(180deg,
+                #fff 0%,
+                rgba(229, 228, 228, 0.85) 66.11%,
+                rgba(101, 99, 99, 0) 117.53%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        backdrop-filter: blur(3.4076030254364014px);
+    }
+}
+
+@media (max-width: 767px) {
+    .CelebritText {
+        font-family: Haffer SQ TRIAL;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 0px;
+        background: linear-gradient(180deg,
+                #fff 0%,
+                rgba(229, 228, 228, 0.85) 66.11%,
+                rgba(101, 99, 99, 0) 117.53%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        backdrop-filter: blur(3.4076030254364014px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .CelebritText {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SeeBox {
+    display: flex;
+    margin-top: -17%;
+    margin-left: 19%;
+
+    width: 428.683px;
+    height: 120px;
+    box-shadow: 21px 21px 21px 21px rgba(157, 157, 157, 0.18) inset;
+    backdrop-filter: blur(24.5px);
+    border-radius: 8008px;
+    border: 1px solid rgba(255, 255, 255, 255);
+    background: linear-gradient(133deg,
+            rgba(255, 253, 253, 0.18) -5.44%,
+            rgba(255, 227, 226, 0.39) -5.44%,
+            rgba(241, 102, 51, 0.39) 26.17%,
+            rgba(253, 45, 125, 0.39) 64.16%,
+            rgba(21, 18, 18, 0.39) 101.18%);
+    backdrop-filter: blur(19.187488555908203px);
+    cursor: pointer;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SeeBox {
+        display: flex;
+        margin-top: -18%;
+        margin-left: 17%;
+
+        width: 400.683px;
+        box-shadow: 6px 6px 21px 0px rgba(157, 157, 157, 0.18) inset;
+        backdrop-filter: blur(24.5px);
+        border-radius: 8008px;
+        border: 1px solid rgba(255, 255, 255, 255);
+        background: linear-gradient(133deg,
+                rgba(255, 253, 253, 0.18) -5.44%,
+                rgba(255, 227, 226, 0.39) -5.44%,
+                rgba(241, 102, 51, 0.39) 26.17%,
+                rgba(253, 45, 125, 0.39) 64.16%,
+                rgba(21, 18, 18, 0.39) 101.18%);
+        backdrop-filter: blur(19.187488555908203px);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    .SeeBox {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SeeBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.SeeOneBox {
+    display: inline-flex;
+    height: 120.029px;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+    padding-left: 69px;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SeeOneBox {
+        height: 120.029px;
+        /* // border: 1px solid red; */
+    }
+}
+
+@media (max-width: 767px) {
+    .SeeOneBox {
+        text-align: center;
+        padding-left: 0px;
+    }
+}
+
+
+.TextLightBox {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .TextLightBox {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .TextLightBox {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+.SeeText {
+    color: rgba(255, 227, 226, 0.9);
+    font-family: Haffer SQ TRIAL;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 38px;
+}
+
+@media (max-width: 767px) {
+    .SeeText {
+        color: rgba(255, 227, 226, 0.9);
+        font-family: Haffer SQ TRIAL;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        margin-top: -35px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SeeText {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SeeTextSec {
+    color: rgba(255, 227, 226, 0.9);
+    font-family: Haffer SQ TRIAL;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 38px;
+}
+
+@media (max-width: 767px) {
+    .SeeTextSec {
+        color: rgba(255, 227, 226, 0.9);
+        font-family: Haffer SQ TRIAL;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-left: 5px;
+        margin-top: -35px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SeeTextSec {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.ImageArrow {
+    width: 57.806px;
+}
+
+
+@media (max-width: 767px) {
+    .ImageArrow {
+        width: 23.122px;
+        stroke-width: 2px;
+        stroke: rgba(255, 227, 226, 0.90);
+        margin-top: -47px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ImageArrow {
+        width: 50px;
+    }
+}
+
+
+.SeeBoxSecond {
+    display: none;
+}
+
+@media (min-width: 991px) and (max-width: 1550px) {
+    .SeeBoxSecond {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .SeeBoxSecond {
+        display: flex;
+        width: 286px;
+        height: 65px;
+        flex-shrink: 0;
+        border-radius: 8000px;
+        border: 1px solid rgba(255, 255, 255, 0.29);
+        background: var(--new-bright,
+                linear-gradient(133deg,
+                    rgba(255, 253, 253, 0.36) -5.44%,
+                    rgba(255, 227, 226, 0.8) -5.44%,
+                    rgba(241, 102, 51, 0.8) 26.17%,
+                    rgba(253, 45, 125, 0.8) 64.16%,
+                    rgba(21, 18, 18, 0.8) 101.18%));
+        backdrop-filter: blur(15.187488555908203px);
+        margin-top: 45px;
+        margin-left: -10px;
+        margin-buttom: 30px;
+
+        /* // border: 2px solid red; */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .SeeBoxSecond {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.SeeTextOne{
+    color: rgba(255, 227, 226, 0.9);
+    font-family: Haffer SQ TRIAL;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 38px;
+}
+
+
+  @media (max-width: 767px) {
+    .SeeTextOne{
+    color: rgba(255, 227, 226, 0.9);
+    font-family: Haffer SQ TRIAL;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    margin-top: -35px;
+  }}
+  @media (min-width: 768px) and (max-width: 991px) {
+    .SeeTextOne{
+    width: 100%;
+    padding: 20px;
+  }}
+
+  .SeeTextSecTwo{
+  
+    color: rgba(255, 227, 226, 0.9);
+    font-family: Haffer SQ TRIAL;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 38px;
+  }
+  
+  @media (max-width: 767px) {
+    .SeeTextSecTwo{
+    color: rgba(255, 227, 226, 0.9);
+    font-family: Haffer SQ TRIAL;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 5px;
+    margin-top: -35px;
+  }}
+  @media (min-width: 768px) and (max-width: 991px) {
+    .SeeTextSecTwo{
+    width: 100%;
+    padding: 20px;
+  }}

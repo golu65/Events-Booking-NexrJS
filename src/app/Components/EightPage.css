@@ -1,0 +1,121 @@
+/* .SliderContainer {
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  
+  .SliderBox {
+    display: flex;
+    animation: move-rtl 9000ms linear infinite;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  
+  .FirstOneBox,
+  .ThirdOneBox,
+  .FirstOneBoxSec {
+    width: 100%;
+    flex: 0 0 100%;
+  
+    margin-right: 10px;
+  }
+  
+  
+  @keyframes move-rtl {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+   */
+  
+  
+  
+  /* CurvedCarousel.css */
+  .mainOneSeven {
+   
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    padding: 150px 0px;
+    grid-template-rows: 1fr min-content min-content 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  
+  
+  .sectionSeven {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    --v-offset: 60px;
+    --curve-height: 156px;
+  }
+  
+  .sectionSeven:before,
+  .sectionSeven:after {
+    content: "";
+    display: block;
+    background: rgb(8, 8, 16);
+    width: calc(119% + 2 * var(--v-offset));
+    height: var(--curve-height);
+    position: absolute;
+    border-radius: 50%;
+    left: calc(-2 * var(--v-offset));
+    right: calc(-2 * var(--v-offset));
+  }
+  
+  .sectionSeven:before {
+    top: calc(-0.6 * var(--curve-height));
+  }
+  
+  .sectionSeven:after {
+    bottom: calc(-0.6 * var(--curve-height));
+  }
+  
+  .wrapperSeven {
+    display: grid;
+    grid-template-rows: 420px;
+    grid-auto-flow: column;
+    grid-gap: 24px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    transition: transform 0.5s ease; /* Add this line for smooth slide transition */
+  }
+  
+  .imageSeven {
+    scroll-snap-align: center;
+    width: 520px;
+    height: 410px;
+    border: 3px solid #FFF;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 991px) and (max-width: 1550px) {
+    .mainOneSeven {
+      width: 84%;
+      height: 100%;
+      margin: auto;
+      display: grid;
+      padding: 100px 0px;
+      grid-template-rows: 1fr min-content min-content 1fr;
+      align-items: center;
+      justify-items: center;
+    } 
+  }
+  
+  @media (min-width: 991px) and (max-width: 1550px) {
+    .imageSeven {
+      scroll-snap-align: center;
+      width: 380px;
+      height: 410px;
+      border: 3px solid #FFF;
+      cursor: pointer;
+    }
+  }

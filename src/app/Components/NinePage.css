@@ -1,0 +1,229 @@
+.image-56-iconInsta {
+    position: absolute;
+    top: 36px;
+    left: -7.64px;
+    width: 50.18px;
+    height: 52.69px;
+    object-fit: cover;
+  }
+  .image-56-wrapperInsta {
+    position: absolute;
+    margin: 0 !important;
+    top: 34.69px;
+    left: 254.94px;
+    border-radius: 627.27px;
+    background-color: var(--color-white);
+    border: 1.1px solid var(--color-white);
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0;
+    z-index: 0;
+  }
+  .whatsapp-image-2023-08-25-at-1Insta {
+    position: relative;
+    border-radius: 22.08px;
+    width: 169.7px;
+    height: 301.31px;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .whatsapp-image-2023-08-25-at-11Insta {
+    position: relative;
+    border-radius: 5.43px;
+    width: 167.09px;
+    height: 68.91px;
+    object-fit: cover;
+  }
+  .whatsapp-image-2023-08-25-at-1-wrapperInsta {
+    margin: 0 !important;
+    position: absolute;
+    top: 125.31px;
+    left: calc(50% - 91.72px);
+    border-radius: 8.18px;
+    background: linear-gradient(
+      101.9deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.1) 58.62%,
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(36.79px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8.175384521484375px;
+    opacity: 0;
+    z-index: 2;
+  }
+  .image-56-icon1Insta {
+    position: absolute;
+    top: 56px;
+    left: -1.3px;
+    width: 58.6px;
+    height: 61.53px;
+    object-fit: cover;
+  }
+  .image-56-containerInsta {
+    position: absolute;
+    margin: 0 !important;
+    top: 72.58px;
+    left: 270.94px;
+    border-radius: 495.38px;
+    background-color: var(--color-white);
+    border: 0.9px solid var(--color-white);
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0;
+    z-index: 3;
+  }
+  .image-55-iconInsta,
+  .image-55-wrapperInsta {
+    position: absolute;
+    left: 0;
+    width: 72px;
+  }
+  .image-55-iconInsta {
+    top: 0;
+    height: 75px;
+    object-fit: cover;
+  }
+  .image-55-wrapperInsta {
+    margin: 0 !important;
+    top: 11.44px;
+    border-radius: 1117.24px 1117.24px 0 1117.24px;
+    background-color: var(--color-white);
+    height: 72px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity: 0.1;
+    z-index: 4;
+  }
+  .frame-parentInsta {
+    position: absolute;
+    top: 66.69px;
+    left: 30.28px;
+    width: 329.44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .component-7-childInsta,
+  .component-7-itemInsta {
+    position: absolute;
+    left: 0;
+    width: 390px;
+    overflow: hidden;
+  }
+  .component-7-childInsta {
+    top: 194px;
+    border-radius: 0 0 var(--br-881xl) var(--br-881xl);
+    background: linear-gradient(180deg, rgba(23, 21, 21, 0), #0b0a0a);
+    height: 221px;
+  }
+  .component-7-itemInsta {
+    top: 754px;
+    height: 617px;
+  }
+  .component-7Insta {
+    position: relative;
+    border-radius: 32px;
+    width: 390px;
+    height: 415px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .sneak-peak-toInsta {
+    color: var(--color-white);
+  }
+  .closest-sneak-peak-containerInsta {
+    align-self: stretch;
+    position: relative;
+    color: var(--color-gray);
+  }
+  .from-mohit-chauhanInsta {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+  .image-57-iconInsta {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+  }
+  .image-57-iconInsta,
+  .take-me-toInsta {
+    position: relative;
+  }
+  .image-57-parentInsta {
+    align-self: stretch;
+    border-radius: 400px;
+    background: linear-gradient(
+      132.67deg,
+      rgba(255, 253, 253, 0.36),
+      rgba(255, 227, 226, 0.8),
+      rgba(241, 102, 51, 0.8) 29.48%,
+      rgba(253, 45, 125, 0.8) 64.9%,
+      rgba(21, 18, 18, 0.8) 99.42%
+    );
+    backdrop-filter: blur(10.16px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px var(--padding-5xl);
+    gap: 16px;
+    font-size: 18px;
+  }
+  .closest-sneak-peak-to-what-sta-parentInsta,
+  .component-7-parentInsta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .closest-sneak-peak-to-what-sta-parentInsta {
+    width: 390px;
+    align-items: center;
+    padding: 32px var(--padding-5xl);
+    box-sizing: border-box;
+    gap: 24px;
+    margin-top: -31px;
+  }
+  .component-7-parentInsta {
+    position: relative;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 32px;
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    overflow: hidden;
+  }
+  
+  
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-gray: rgba(255, 255, 255, 0.6);
+  
+    /* Paddings */
+    --padding-5xl: 24px;
+  
+    /* Border radiuses */
+    --br-881xl: 900px;
+    --br-1098xl-2: 1117.2px;
+  }
+  
