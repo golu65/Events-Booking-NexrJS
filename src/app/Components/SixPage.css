@@ -58,8 +58,8 @@
   width: 72.18px;
   height: 79.15px;
   opacity: 1;
-  top: 18.43px;
-  left: 45px;
+  top: 27.43px;
+  left: 160px;
 }
 .cr-parentSince {
   position: absolute;
@@ -100,7 +100,7 @@
 }
 .performancesSince {
   position: relative;
-  font-size: var(--font-size-lg);
+  font-size: 22px;
 }
 .k-parentSince {
   width: 310px;

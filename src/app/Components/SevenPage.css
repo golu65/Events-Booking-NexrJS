@@ -310,15 +310,14 @@
         rgba(255, 227, 226, 0.8),
         rgba(241, 102, 51, 0.8) 31.04%,
         rgba(237, 47, 107, 0.8) 60.21%,
-        rgba(21, 18, 18, 0.8) 99.42%);
+        rgba(21, 18, 18, 0.8) 120.42%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
   .frame-item {
     position: relative;
-    width: 35.49px;
-    height: 14.73px;
+   font-size: 40px;
   }
   
   .explore-all-categories-parent {
@@ -328,9 +327,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 100px 0;
+    padding: 50px 0;
     gap: 10px;
-    font-size: 32px;
+    font-size: 1.68vw;
     margin-left: 14px;
   }
   
@@ -553,7 +552,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       gap: 12px;
-      font-size: 70px;
+      font-size: 3.675vw;
       color: rgba(255, 255, 255, 0.5);
     }
   
@@ -879,11 +878,12 @@
     .explore-all-categoriesTwo {
       position: relative;
       background: linear-gradient(
-        86.31deg,
+        10.31deg,
         rgba(114, 114, 114, 0),
         #ff8db9 30.06%,
         #f86e42
       );
+      font-size: 18px;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -938,5 +938,43 @@
       font-size: var(--mob-h1-size);
       color: var(--color-white);
       font-family: var(--font-inter);
+      margin-top: -108px;
     }
     
+
+/* 
+    #text {
+      height: 0px;
+      font-size: 0px;
+      color: rgb(0, 0, 0);
+      animation: animate 7s linear infinite;
+    }
+    
+    @media (max-width: 767px) {
+      #text {
+        height: 134px;
+        font-size: 12px;
+        color: #FFF;
+        animation: animate 7s linear infinite;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      @keyframes animate {
+        from {
+          transform: rotate(0deg);
+        }
+    
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+    
+    @media (max-width: 767px) {
+      span {
+        position: absolute;
+        transform-origin: 0 67px;
+    
+      }
+    } */

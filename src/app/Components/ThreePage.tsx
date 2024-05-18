@@ -12,24 +12,48 @@ const ThreePage = () => {
     <div className='MainBoxThree'>
       <div className='SecondBoxThree'>
         <div className='ArtitstBoxThree'>
-          <div className='FirstArtitstBox '></div>
-          <div className='SecondArtitsBox'></div>
-          <div className='FirstArtitstBoxSec'></div>
-          <div className='SecondArtitsBoxSec'></div>
+          <div >
+            <img className='FirstArtitstBox ' src="Image/ArtistOne.webp" alt="magecian"/>
+          </div>
+          <div>
+            <img  className='SecondArtitsBox' src="Image/ArtitsSec.webp" alt="magecian" />
+          </div>
+          <div >
+            <img className='FirstArtitstBoxSec' src="Image/sec2.webp" alt="badasah" />
+          </div>
+          <div className='SecondArtitsBoxSec'>
+            <img src="Image/sec1.webp" alt="nina" />
+          </div>
         </div>
 
         <div className='SecArtitsBox'>
-          <div className='FirstSecBox'></div>
-          <div className='SecondSecBox'></div>
-          <div className='FirstSecBoxSec'></div>
-          <div className='SecondSecBoxSec'></div>
+          <div >
+            <img className='FirstSecBox' src="Image/SecOne.webp" alt="yo yo hanny" />
+          </div>
+          <div >
+            <img className='SecondSecBox' src="Image/SecSec.webp" alt="euphoria" />
+          </div>
+          <div >
+            <img className='FirstSecBoxSec' src="Image/sec5.webp" alt="sonam" />
+          </div>
+          <div >
+            <img className='SecondSecBoxSec' src="Image/sec6.webp" alt="vivek bindra" />
+          </div>
         </div>
 
         <div className='ThirdArtitsBox'>
-          <div className='FirstThirdBox'></div>
-          <div className='SecondThirdBox'></div>
-          <div className='FirstThirdBoxSec'></div>
-          <div className='SecondThirdBoxSec'></div>
+          <div >
+            <img  className='FirstThirdBox' src="Image/sec7.webp" alt="vishmil" />
+          </div>
+          <div >
+            <img className='SecondThirdBox' src="Image/sec8.webp" alt="sahid kapoor" />
+          </div>
+          <div>
+            <img  className='FirstThirdBoxSec' src="Image/sec3.webp" alt="kubbra sait" />
+          </div>
+          <div >
+            <img className='SecondThirdBoxSec' src="Image/sec4.webp" alt="manish dev" />
+          </div>
         </div>
 
         <div className='FourBoxOneThree'>
@@ -58,6 +82,7 @@ const ThreePage = () => {
         </div>
 
         <div className='SeeBoxSecond'>
+        <Link href='/categoery'>
           <div className='SeeOneBox'>
             <div className='TextLightBox'>
               <h2 className='SeeTextOne'>See Price and</h2>
@@ -65,6 +90,7 @@ const ThreePage = () => {
             </div>
             <img className='ImageArrow' src="Image/Arror.svg" alt="arroe" />
           </div>
+          </Link>
         </div>
       </div>
     </div>

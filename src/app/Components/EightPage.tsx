@@ -5,17 +5,17 @@
 import React, { Fragment, useState } from "react";
 import { Box, Typography, styled } from "@mui/material";
 import "./EightPage.css";
-import Link from "next/link";
+// import Link from "next/link";
 // import baseURL from "../../apiConfig";
 
 const MainBox = styled(Box)`
   padding-top: 0px;
   width: 100%;
-  height: 1000px;
+  height: 600px;
   background: rgb(8, 8, 16);
   overflow: hidden;
   @media (min-width: 991px) and (max-width: 1550px) {
-    height: 1000px;
+    height: 0px;
   }
   @media (max-width: 767px) {
     width: 100%;
@@ -334,7 +334,7 @@ const EightPage = () => {
         </SeconBox>
         <ThirdBox>
 
-          <LiveBox>
+          {/* <LiveBox>
             <Link href="/book-anchor-online">
               <LiveOne>
                 <LiveText>Anchor/Emcee</LiveText>
@@ -415,9 +415,9 @@ const EightPage = () => {
               </LiveOne>
             </Link>
 
-          </LiveBoxTwo>
+          </LiveBoxTwo> */}
 
-          <div className="mainOneSeven">
+          {/* <div className="mainOneSeven">
             <section className="sectionSeven">
               <div className="wrapperSeven">
                 {Array.from({ length: 3 }).map((_, i) => (
@@ -430,7 +430,7 @@ const EightPage = () => {
                 ))}
               </div>
             </section>
-          </div>
+          </div> */}
         </ThirdBox>
       </MainBox>
     </Fragment>

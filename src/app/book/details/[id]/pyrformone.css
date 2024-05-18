@@ -60,7 +60,7 @@
     top: 56px;
     left: 56px;
     border-radius: 166px;
-    width: 459px;
+    width: 358px;
     flex-direction: column;
     align-items: center;
 }
@@ -335,8 +335,8 @@
 
 .next-stepFromOne {
     position: absolute;
-    top: 710px;
-    left: 1390px;
+    top: 519px;
+    left: 846px;
     font-size: var(--font-size-lg);
     font-weight: 600;
     background: linear-gradient(132.67deg,
@@ -353,8 +353,8 @@
 @media (min-width: 1300px) and (max-width: 1510px) {
     .next-stepFromOne {
         position: absolute;
-        top: 618px;
-        left: 952px;
+        top: 517px;
+        left: 831px;
         font-size: var(--font-size-lg);
         font-weight: 600;
         background: linear-gradient(132.67deg,
@@ -588,3 +588,397 @@
     background-color: #b43a3a;
     color: white;
   }
+
+  .all-categoriesGTQMobileOne {
+    flex: 1;
+    position: relative;
+  }
+  
+  .all-categories-comedians-z-wrapperGTQMobileOne {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .frame-wrapperGTQMobileOne {
+    width: 24.38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.76rem 1.52rem;
+    box-sizing: border-box;
+  }
+  
+  .zakir-khan-1GTQMobileOne {
+    flex: 1;
+    position: relative;
+    border-radius: 28px;
+    background: linear-gradient(180deg,
+        transparent,
+        rgba(8, 8, 16, 0) 41.23%,
+        #141419);
+    height: 13.46rem;
+  }
+  
+  .component-29GTQMobileOne,
+  .zakir-khan-1-wrapperGTQMobileOne {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .zakir-khan-1-wrapperGTQMobileOne {
+    align-self: stretch;
+    border-radius: 12.95px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .component-29GTQMobileOne {
+    border-radius: 48.87px;
+    width: 19.38rem;
+    height: 12.94rem;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+  }
+  
+  .frame-childGTQMobileOne {
+    position: absolute;
+    margin: 0 !important;
+    top: 8.35rem;
+    left: -0.37rem;
+    background: linear-gradient(180deg, rgba(6, 6, 12, 0), #0b0b16);
+    width: 19.63rem;
+    height: 7.81rem;
+    z-index: 1;
+  }
+  
+  .woohoo-you-madeGTQMobileOne {
+    position: relative;
+    font-weight: 600;
+    display: inline-block;
+    width: 18.19rem;
+  }
+  
+  .just-a-stepGTQMobileOne {
+    position: relative;
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-100);
+    text-align: left;
+  }
+  
+  .woohoo-you-made-a-great-choic-parentGTQMobileOne {
+    height: 5.44rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .your-nameGTQMobileOne {
+    opacity: 0.9;
+  }
+  
+  .select-the-typeGTQMobileOne,
+  .your-nameGTQMobileOne {
+    position: relative;
+  }
+  
+  .frame-wrapper2GTQMobileOne,
+  .select-the-type-wrapperGTQMobileOne {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .frame-wrapper2GTQMobileOne {
+    align-self: stretch;
+    border-radius: 9.72px;
+    background-color: var(--color-gray-300);
+    backdrop-filter: blur(10.3px);
+    overflow: hidden;
+    padding: 0.91rem 1.82rem;
+    color: var(--color-gray-200);
+  }
+  
+  .frame-wrapper1GTQMobileOne,
+  .your-name-parentGTQMobileOne {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .your-name-parentGTQMobileOne {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.61rem;
+    opacity: 0.8;
+  }
+  
+  .frame-wrapper1GTQMobileOne {
+    width: 19.38rem;
+  }
+  
+  .frame-wrapper1GTQMobileOne,
+  .frame-wrapper3GTQMobileOne,
+  .frame-wrapper4GTQMobileOne {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .frame-wrapper4GTQMobileOne {
+    border-radius: 9.72px;
+    background-color: var(--color-gray-300);
+    /* backdrop-filter: blur(10.3px); */
+    width: 19.38rem;
+    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.91rem 1.82rem;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .frame-wrapper3GTQMobileOne {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .doneGTQMobileOne {
+    position: relative;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  .done-wrapperGTQMobileOne {
+    border-radius: 4.8px;
+    background-color: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(10.18px);
+    width: 1.13rem;
+    height: 1.13rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1.05rem 1.8rem;
+    box-sizing: border-box;
+  }
+  
+  .frame-parent4GTQMobileOne,
+  .frame-wrapper14GTQMobileOne {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .frame-parent4GTQMobileOne {
+    align-items: flex-start;
+    gap: 0.29rem;
+    opacity: 0.8;
+  }
+  
+  .frame-wrapper14GTQMobileOne {
+    align-items: center;
+  }
+  
+  .frame-parent2GTQMobileOne,
+  .frame-wrapper13GTQMobileOne {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .frame-wrapper13GTQMobileOne {
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .frame-parent2GTQMobileOne {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-base);
+  }
+  
+  .display-fee-wrapperGTQMobileOne {
+    align-self: stretch;
+    border-radius: 400px;
+    background: linear-gradient(132.67deg,
+        rgba(255, 253, 253, 0.36),
+        rgba(255, 227, 226, 0.8),
+        rgba(241, 102, 51, 0.8) 29.48%,
+        rgba(253, 45, 125, 0.8) 64.9%,
+        rgba(21, 18, 18, 0.8) 99.42%);
+    backdrop-filter: blur(10.16px);
+    height: 2.88rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-base) var(--padding-5xl);
+    box-sizing: border-box;
+    font-size: 1.13rem;
+  }
+  
+  .frame-parent1GTQMobileOne {
+    width: 19.38rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  
+  .frame-divGTQMobileOne {
+    align-self: stretch;
+    align-items: flex-start;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-white);
+  }
+  
+  .component-29-parentGTQMobileOne,
+  .frame-divGTQMobileOne,
+  .frame-groupGTQMobileOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .frame-groupGTQMobileOne {
+    align-items: center;
+    gap: 1.84rem;
+    z-index: 2;
+  }
+  
+  .component-29-parentGTQMobileOne {
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .frame-containerGTQMobileOne {
+    align-self: stretch;
+    border-radius: 44px;
+    background: linear-gradient(178.8deg, #141429, transparent);
+    box-shadow: 0 4px 33px rgba(0, 0, 0, 0.9) inset;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--padding-base);
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgba(255, 253, 253, 0.8);
+  }
+  
+  .frame-parentGTQMobileOne {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var(--padding-5xl);
+    box-sizing: border-box;
+    gap: var(--gap-base);
+    text-align: left;
+    font-size: 0.63rem;
+    color: var(--color-gray-100);
+    font-family: var(--font-inter);
+    margin-top: 5rem;
+  }
+  
+  .validation-error {
+    color: red;
+    font-family: var(--font-inter);
+    font-weight: bold;
+  }
+  
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+  
+    /* font sizes */
+    --font-size-xs: 0.75rem;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-gray-100: rgba(255, 255, 255, 0.5);
+    --color-gray-200: rgba(255, 255, 255, 0.58);
+    --color-gray-300: rgba(255, 255, 255, 0.04);
+  
+    /* Gaps */
+    --gap-base: 1rem;
+    --gap-3xs-7: 0.61rem;
+  
+    /* Paddings */
+    --padding-5xl: 1.5rem;
+    --padding-base: 1rem;
+    --padding-mini-6: 0.91rem;
+    --padding-10xl-1: 1.82rem;
+  
+    /* Border radiuses */
+    --br-3xs-7: 9.7px;
+  }
+  
+  
+  
+  
+  
+  /* mobile viwe drop down */
+  .custom-dropdownOne {
+    width: 100%;
+    padding: 0.91rem 1.82rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    height: 64px;
+    background-color: var(--color-gray-300);
+  }
+  
+  
+  .custom-dropdownOne::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  
+  }
+  
+  
+  .custom-option {
+    width: 120px;
+    color: #333;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  
+  .custom-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  
+  
+  

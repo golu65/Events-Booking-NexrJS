@@ -5,8 +5,11 @@
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import { Box, styled } from "@mui/material";
 import "./pyrformone.css";
+import NavbarOne from "@/app/MainNavbar/NavbarOne";
+import Footer from "@/app/Page/Footer";
+
 // import citiesData from "../../CategoryProfile/cities.json";
-import Link from "next/link";
+// import Link from "next/link";
 
 const MainBox = styled(Box)`
   padding-top: 150px;
@@ -27,6 +30,25 @@ const MainBox = styled(Box)`
     padding: 20px;
   }
 `;
+
+const eventDictionary = {
+  1: "Campus",
+  2: "Charity",
+  3: "Concert/Festival",
+  4: "Corporate",
+  5: "Exhibition",
+  6: "Fashion Show",
+  7: "Inauguration",
+  8: "Kids Party",
+  9: "Photo/Video Shoot",
+  10: "Private Party",
+  11: "Professional Hiring",
+  12: "Religious",
+  13: "Restaurant",
+  14: "Wedding",
+  15: "Virtual",
+  16: "Video Shoutout",
+};
 
 const PyrFromOne = () => {
   const selectedImage = localStorage.getItem("selectedImage");
@@ -87,8 +109,9 @@ const PyrFromOne = () => {
     }).toString();
 
     const urlSegments = window.location.pathname.split("/");
-    const event_name = urlSegments[urlSegments.length - 1];
-    const decoded_event_name = decodeURIComponent(event_name);
+    const event_id = urlSegments[urlSegments.length - 1];
+    const decoded_event_name = decodeURIComponent(eventDictionary[event_id]);
+
     console.log("Event Name:", decoded_event_name);
     console.log("Billing Event Date:", date);
     console.log("Billing Event Budget:", budget);
@@ -138,6 +161,7 @@ const PyrFromOne = () => {
 
   return (
     <Fragment>
+      <NavbarOne/>
       <MainBox>
         {isMobileView ? (
           <>
@@ -331,7 +355,7 @@ const PyrFromOne = () => {
                       <div className="frame-parent2FromOne">
                         <div className="frame-wrapper3FromOne">
                           <div className="whats-the-occasion-parentFromOne">
-                            <div className="whats-the-occasionFromOne">
+                            <div className="whats-the-occasionFromOne" style={{marginLeft:'-127px'}}>
                               Event Date
                             </div>
 
@@ -341,7 +365,7 @@ const PyrFromOne = () => {
                                   ? "2px solid red"
                                   : "1px solid #ccc",
                                 outline: "none",
-
+                                marginLeft: '-137px',
                                 color: "white",
                               }}
                               type="date"
@@ -371,10 +395,13 @@ const PyrFromOne = () => {
                                   border: validationErrors.venue
                                     ? "2px solid red"
                                     : "1px solid #ccc",
-                                  outline: "none",
-
-                                  color: "white",
-                                  appearance: "textfield",
+                                    border: '1px solid rgb(204, 204, 204)',
+                                    outline: 'none',
+                                    color: 'white',
+                                    appearance: 'textfield',
+                                    marginLeft: '-7px',
+                                    width: '249px',
+                                    height: '63px'
                                 }}
                                 type="text"
                                 className="frame-wrapper6FromOne"
@@ -409,7 +436,7 @@ const PyrFromOne = () => {
                       <div className="frame-parent2FromOne"></div>
                       <div className="frame-wrapper1FromOne">
                         <div className="whats-the-occasion-parentFromOne">
-                          <div className="whats-the-occasionFromOne">
+                          <div className="whats-the-occasionFromOne" style={{marginLeft:'-127px'}}>
                             Budget
                           </div>
 
@@ -419,8 +446,10 @@ const PyrFromOne = () => {
                                 ? "2px solid red"
                                 : "1px solid #ccc",
                               outline: "none",
-
+                              marginLeft:'-136px',
                               color: "white",
+                              height: '63px',
+                              width:'243px',
                               appearance: "textfield",
                             }}
                             type="number"
@@ -450,6 +479,7 @@ const PyrFromOne = () => {
           </>
         )}
       </MainBox>
+      <Footer/>
     </Fragment>
   );
 };

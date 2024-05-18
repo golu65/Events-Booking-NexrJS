@@ -9,6 +9,8 @@ import ThreePage from "../Components/ThreePage";
 import TwoPage from "../Components/TwoPage";
 import Footer from "../Page/Footer";
 
+
+
 export default function Home() {
     return (
         <div>
@@ -20,7 +22,7 @@ export default function Home() {
             <FivePage />
             <SixPage/>
             <SevenPage/>
-            <EightPage/>
+            {/* <EightPage/> */}
             <NinePage/>
             <Footer/>
         </div>

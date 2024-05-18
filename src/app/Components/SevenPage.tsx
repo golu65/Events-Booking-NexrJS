@@ -10,6 +10,7 @@ import "./SevenPage.css";
 import Link from "next/link";
 import { AiOutlineArrowRight } from "react-icons/ai";
 // import { Link } from "react-router-dom";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 
 const MainBox = styled(Box)`
@@ -52,7 +53,7 @@ const SingerBox = styled(Box)`
 
 const WeBox = styled(Box)`
   display: flex;
-  width: 252px;
+  width: 300px;
   margin: auto;
   padding: 121.5px 48.114px 114.5px 48.114px;
   flex-direction: column;
@@ -235,22 +236,22 @@ const LearningText = styled(Typography)`
 `;
 
 const SevenHomePage = () => {
-  useEffect(() => {
-    const manipulateText = () => {
-      const text = document.getElementById("textSpanOne");
-      if (text) {
-        text.innerHTML = text.textContent.replace(
-          /\S/g,
-          "<span>$&</span>"
-        );
-        const ele = document.querySelectorAll("span");
-        for (let i = 1; i < ele.length; i++) {
-          ele[i].style.transform = "rotate(" + i * 10 + "deg)";
-        }
-      }
-    };
-    manipulateText();
-  }, []);
+  // useEffect(() => {
+  //   const text = document.getElementById("text");
+  //   text.innerHTML = text.textContent.replace(/\S/g, "<strong>$&</strong>");
+  //   const ele = document.querySelectorAll("strong");
+  //   for (let i = 1; i < ele.length; i++) {
+  //     ele[i].style.transform = "rotate(" + i * 10 + "deg)";
+  //   }
+  // }, []);
+
+  const containerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100px", // Set the height to 102px
+    width: "100px", // Set the width to 102px
+  };
 
   const [isMobileView, setIsMobileView] = useState(false);
 
@@ -267,14 +268,6 @@ const SevenHomePage = () => {
       window.removeEventListener("resize", checkScreenWidth);
     };
   }, []);
-
-  const containerStyleLite = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100px", // Set the height to 102px
-    width: "100px", // Set the width to 102px
-  };
   return (
     <Fragment>
       <MainBox>
@@ -312,16 +305,21 @@ const SevenHomePage = () => {
                     </nbsp>
                   </WeText>
                   <ReadBox>
-                    <ReadText>Read More</ReadText>
-                    <AiOutlineArrowRight
-                      style={{
-                        fontSize: "18px",
-                        color: "white",
-                        fontWeight: "bold",
-                        paddingLeft: "5px",
-                        paddingTop: "0px",
-                      }}
-                    />
+                    <Link
+                      href="/footerpage/ourstory"
+                      style={{ textDecoration: "none", color: "white" }}
+                    >
+                      <ReadText>Read More</ReadText>
+                      <AiOutlineArrowRight
+                        style={{
+                          fontSize: "18px",
+                          color: "white",
+                          fontWeight: "bold",
+                          paddingLeft: "5px",
+                          paddingTop: "0px",
+                        }}
+                      />
+                    </Link>
                   </ReadBox>
                 </WeBox>
               </Box>
@@ -333,10 +331,10 @@ const SevenHomePage = () => {
                         <CirculBox>
                           <CirclleSecBox>
                             <CirclleThirdBox>
-                              <div style={containerStyleLite}>
-                                {/* <Typography variant="h4" id="textSpanOne">
-                                  YEARS OF ⭐ EXCELLENCE IN EN-TECH IN STARTUP
-                                </Typography> */}
+                              <div style={containerStyle}>
+                                <Typography variant="h4" id="text">
+                                  {/* YEARS OF ⭐ EXCELLENCE IN EN-TECH IN STARTUP */}
+                                </Typography>
                               </div>
                               <Box>
                                 <CircleText>08</CircleText>
@@ -394,14 +392,14 @@ const SevenHomePage = () => {
                   <img
                     className="image-88-iconTwo"
                     alt=""
-                    src="Image/onenora.png"
+                    src="Image/seven3.webp"
                   />
                 </div>
                 <div className="image-86-parentTwo">
                   <img
                     className="image-86-iconTwo"
                     alt=""
-                    src="Image/SecOne.png"
+                    src="Image/seven4.webp"
                   />
                   <div className="anchorsTwo">Anchors</div>
                 </div>
@@ -409,28 +407,29 @@ const SevenHomePage = () => {
                   <img
                     className="zakir-khan-1Two"
                     alt=""
-                    src="Image/zone.png"
+                    src="Image/seven2.webp"
                   />
 
                   <div className="comediansTwo">Comedians</div>
                 </div>
                 <div className="choose-from-10-categories-parentTwo">
                   <div className="choose-from-10-containerTwo">
-                    <nbsp>Choose from</nbsp>
-                    <nbsp className="categoriesTwo"> 10+ Categories</nbsp>
+                    <nbsp style={{ fontSize: '32px' }}>Choose from</nbsp>
+                    <nbsp className="categoriesTwo" style={{ fontSize: '32px' }}> 10+ Categories</nbsp>
                   </div>
                   <div className="explore-all-categories-parentTwo">
-                    <div className="explore-all-categoriesTwo">
-                      Explore all categories
-                    </div>
-                    <img
+                    <Link href='/categoery' style={{ textDecoration: 'none' }}>
+                      <div className="explore-all-categoriesTwo">
+                        Explore all categories
+                      </div>
+                    </Link>
+                    <ArrowRightAltIcon
                       className="frame-childTwo"
-                      alt=""
-                      src=""
+
                     />
                   </div>
                 </div>
-            
+
               </div>
             </SingerBox>
           </>
@@ -455,23 +454,23 @@ const SevenHomePage = () => {
                       <div className="anchors">Anchors</div>
                       <img
                         className="image-86-icon"
-                        alt=""
-                        src="Image/onenora.png"
+                        alt="Arijit Singh"
+                        src="Image/seven3.webp"
                       />
                     </div>
                     <div className="actors-wrapper">
                       <div className="anchors">Actors</div>
                       <img
                         className="image-86-icon"
-                        alt=""
-                        src="Image/SecOne.png"
+                        alt="olly"
+                        src="Image/seven5.webp"
                       />
                     </div>
                     <div className="image-86-parent">
                       <img
                         className="image-86-icon"
-                        alt=""
-                        src="Image/screenmobile.png"
+                        alt="jay bhanu shaili"
+                        src="Image/seven4.webp"
                       />
 
                       <img
@@ -487,15 +486,15 @@ const SevenHomePage = () => {
                       <div className="actors1">Actors</div>
                       <img
                         className="image-88-icon"
-                        alt=""
-                        src="Image/SliderTwo.png"
+                        alt="atul ali"
+                        src="Image/seven1.webp"
                       />
                     </div>
                     <div className="zakir-khan-1-parent">
                       <img
                         className="zakir-khan-1"
-                        alt=""
-                        src="Image/zone.png"
+                        alt="comedian"
+                        src="Image/seven2.webp"
                       />
 
                       <div className="comedians">Comedians</div>
@@ -504,20 +503,20 @@ const SevenHomePage = () => {
                   <div className="choose-from-100-categories-parent">
                     <div className="choose-from-100-container">
                       <nbsp>Choose from</nbsp>
-                      <nbsp className="categories"> 100+ Categories</nbsp>
+                      <nbsp className="categories"> 10+ Categories</nbsp>
                     </div>
                     <div className="explore-all-categories-parent">
-                      <Link href='/category' style={{textDecoration:'none'}}>
-                      <div className="explore-all-categories">
-                        Explore all categories
-                      </div>
-                      <img
-                        className="frame-item"
-                        alt=""
-                        src="./public/vector-209.svg"
-                      />
+                      <Link href='/categoery' style={{ textDecoration: 'none' }}>
+                        <div className="explore-all-categories">
+                          Explore all categories
+                          <ArrowRightAltIcon
+                            className="frame-item"
+
+                          />
+                        </div>
+
                       </Link>
-                     
+
                     </div>
                   </div>
                 </div>

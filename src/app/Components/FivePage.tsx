@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import './FivePage.css'
-import Slider from './SliderOne'
+import Slider from './Slider';
 
 const FivePage = () => {
 
@@ -24,9 +24,9 @@ const FivePage = () => {
   return (
     <div className='MainBoxFive'>
       <div className='HightBox'>
-        <div className='HightBox'>
+       
           <h1 className='HighText'>High Profile Clients Trust Us </h1>
-        </div>
+        
       </div>
       {isMobileView ? (
         <div className='MobileBox'>
@@ -34,8 +34,8 @@ const FivePage = () => {
             <Slider>
               <div className="slide">
                 <div className='OneText'>
-                  <img className='ImageLogo' src="Image/higt.svg" alt="Image/higt.svg" />
-                  Perfectly organized event{" "}
+                  <img className='ImageLogo' src="Image/higt.svg" alt="quotation marks" />
+                  Had a great time working with the StarClinch team.{" "}
                   <strong
                     style={{
                       color: "rgba(255, 255, 255, 0.43)",
@@ -46,9 +46,9 @@ const FivePage = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    at Pune and a huge
+                     One of the most professional companies and takes great care of the artists and their requirements.
                   </strong>{" "}
-                  shout out to StarClinch{" "}
+                  Thanks a lot.{" "}
                   <strong
                     style={{
                       color: "rgba(255, 255, 255, 0.43)",
@@ -60,16 +60,16 @@ const FivePage = () => {
                     }}
                   >
                     {" "}
-                    for this wonderful opportunity
+                    Looking forward to work again and enjoy the hospitality Cheers
                   </strong>
                 </div>
-                <div className='ImageSliderBox'></div>
+                {/* <div className='ImageSliderBox'></div> */}
                 <h2 className='AbhiText'>-Abhishek Vyas (Singer)</h2>
               </div>
               <div className="slide">
                 <div className='OneText'>
-                  <img className='ImageLogo' src="Image/higt.svg" alt="Image/higt.svg" />
-                  Perfectly organized event{" "}
+                  <img className='ImageLogo' src="Image/higt.svg" alt="icon pawan" />
+                  We've hired multiple comedians and anchors through StarClinch.{" "}
                   <strong
                     style={{
                       color: "rgba(255, 255, 255, 0.43)",
@@ -80,9 +80,9 @@ const FivePage = () => {
                       lineHeight: "normal",
                     }}
                   >
-                    at delhi and a huge
+                   The team is very helpful
                   </strong>{" "}
-                  shout out to StarClinch{" "}
+                  {/* shout out to StarClinch{" "} */}
                   <strong
                     style={{
                       color: "rgba(255, 255, 255, 0.43)",
@@ -94,14 +94,13 @@ const FivePage = () => {
                     }}
                   >
                     {" "}
-                    arrangements perfectly. Very punctual
+                    and goes above and beyond for their clients.
                   </strong>
                 </div>
-                <div className='ImageSliderBox'></div>
+                {/* <div className='ImageSliderBox'></div> */}
                 <h2 className='AbhiText'>-Shaam Sundar (Magician)</h2>
               </div>
-              <div className='ImageSliderBox'></div>
-              <h2 className='AbhiText'>-Abhishek Vyas (Singer)</h2>
+             
             </Slider>
           </div>
         </div>
@@ -110,8 +109,8 @@ const FivePage = () => {
           <Slider>
             <div className="slide">
               <div className='OneText'>
-                <img className='ImageLogo' src="Image/higt.svg" alt="Image/higt.svg" />
-                Perfectly organized event{" "}
+                <img className='ImageLogo' src="Image/higt.svg" alt="icon quotation marks" />
+                Had a great time working with the StarClinch team.{" "}
                 <strong
                   style={{
                     color: "rgba(255, 255, 255, 0.43)",
@@ -122,9 +121,9 @@ const FivePage = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  at Pune and a huge
+                   One of the most professional companies and takes great care of the artists and their requirements. 
                 </strong>{" "}
-                shout out to StarClinch{" "}
+                Thanks a lot.{" "}
                 <strong
                   style={{
                     color: "rgba(255, 255, 255, 0.43)",
@@ -136,15 +135,15 @@ const FivePage = () => {
                   }}
                 >
                   {" "}
-                  for this wonderful opportunity
+                  Looking forward to work again and enjoy the hospitality Cheers
                 </strong>
               </div>
 
             </div>
             <div className="slide">
               <div className='OneText'>
-                <img className='ImageLogo' src="Image/higt.svg" alt="Image/higt.svg" />
-                Perfectly organized event{" "}
+                <img className='ImageLogo' src="Image/higt.svg" alt="quotation marks" />
+                We've hired multiple comedians and anchors through StarClinch. {" "}
                 <strong
                   style={{
                     color: "rgba(255, 255, 255, 0.43)",
@@ -155,9 +154,9 @@ const FivePage = () => {
                     lineHeight: "normal",
                   }}
                 >
-                  at delhi and a huge
+                  The team is very helpful
                 </strong>{" "}
-                shout out to StarClinch{" "}
+             
                 <strong
                   style={{
                     color: "rgba(255, 255, 255, 0.43)",
@@ -169,7 +168,41 @@ const FivePage = () => {
                   }}
                 >
                   {" "}
-                  arrangements perfectly. Very punctual
+                  and goes above and beyond for their clients.
+                </strong>
+              </div>
+
+            </div>
+
+            <div className="slide">
+              <div className='OneText'>
+                <img className='ImageLogo' src="Image/higt.svg" alt="quotation marks" />
+                We've hired multiple comedians and anchors  {" "}
+                <strong
+                  style={{
+                    color: "rgba(255, 255, 255, 0.43)",
+                    fontFamily: "Haffer SQ TRIAL",
+
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    lineHeight: "normal",
+                  }}
+                >
+                  through StarClinch. The team is very helpful
+                </strong>{" "}
+             
+                <strong
+                  style={{
+                    color: "rgba(255, 255, 255, 0.43)",
+                    fontFamily: "Haffer SQ TRIAL",
+
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    lineHeight: "normal",
+                  }}
+                >
+                  {" "}
+                  and goes above and beyond for their clients.
                 </strong>
               </div>
 

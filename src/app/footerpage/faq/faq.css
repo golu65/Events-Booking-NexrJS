@@ -1,0 +1,157 @@
+
+
+  
+  :root {
+    /* fonts */
+    --heading-3: Inter;
+  
+    /* font sizes */
+    --body-1-size: 24px;
+    --heading-3-size: 32px;
+    --font-size-lg: 18px;
+    --heading-2-size: 48px;
+  
+    /* Colors */
+    --color-gray-100: rgba(255, 255, 255, 0.65);
+    --color-gray-200: rgba(255, 255, 255, 0.85);
+    --color-gray-300: rgba(255, 255, 255, 0.3);
+    --color-white: #fff;
+  
+    /* Gaps */
+    --gap-101xl: 120px;
+    --gap-13xl: 32px;
+    --gap-5xl: 24px;
+  
+    /* Paddings */
+    --padding-13xl: 32px;
+    --padding-base: 16px;
+  
+    /* Border radiuses */
+    --br-281xl: 300px;
+    --br-5xl: 24px;
+    --br-721xl: 740px;
+  }
+  
+
+  @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: "Muli", sans-serif;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  color: #000000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  color: #2ecc71;
+  content: "\f075";
+  font-family: "Font Awesome 6 Free";
+  font-size: 7rem;
+  left: 20px;
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  left: -30px;
+  top: -10px;
+  transform: rotateY(180deg);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  height: 30px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+}
+.faq-toggle .fa-times,
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: #000000;
+  display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+  display: block;
+}
+
+.faq.active .faq-toggle {
+  background-color: #9fa4a8;
+  color: #000000;
+}
+
+
+.FaqOne{
+  width: 60%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+  .FaqOne{
+    width: 96%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}

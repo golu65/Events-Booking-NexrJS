@@ -5,8 +5,9 @@ import { styled, Box, Typography, keyframes } from "@mui/material";
 import React, { Fragment, useEffect, useState, useRef } from "react";
 import InputBase from "@mui/material/InputBase";
 // import baseURL from "../../apiConfig";
-
 import "./OnePage.css";
+import apiUrlClinet from "../../../urlconfig";
+
 
 const MainBox = styled(Box)`
   padding-top: 5px;
@@ -17,10 +18,11 @@ const MainBox = styled(Box)`
   background: rgb(8, 8, 16);
   @media (min-width: 1000px) and (max-width: 1350px) {
     // border: 1px solid red;
+    overflow: hidden;
   }
   @media (max-width: 767px) {
     width: 100%;
-    height: 1050px;
+    height: 1200px;
     overflow: hidden;
     box-sizing: border-box;
     // border: 2px solid red;
@@ -37,6 +39,7 @@ const SecondBox = styled(Box)`
   padding-top: 50px;
   background: rgb(8, 8, 16);
   fill: #0b0a0a;
+  overflow: hidden;
   border-top: 10px solid rgb(8, 8, 16);
   box-shadow: 0px 55px 139px 0px rgba(0, 0, 0, 0.9) inset,
     0px 20px 93px 0px rgba(0, 0, 0, 0.9) inset;
@@ -278,7 +281,7 @@ const BookText = styled(Typography)`
   color: #fff;
   text-align: center;
   font-family: Inter;
-  font-size: 104px;
+  font-size: 5vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -295,7 +298,7 @@ const BookText = styled(Typography)`
     color: #fff;
     text-align: center;
     font-family: Inter;
-    font-size: 48px;
+    font-size: 4vw;
     font-style: normal;
     font-weight: 400;
     line-height: 59px; /* 122.917% */
@@ -310,7 +313,7 @@ const BookTextSec = styled(Typography)`
   color: #fff;
   text-align: center;
   font-family: Inter;
-  font-size: 48px;
+  font-size: 3vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -325,7 +328,7 @@ const BookTextSec = styled(Typography)`
     color: #fff;
     text-align: center;
     font-family: Inter;
-    font-size: 48px;
+    font-size: 2vwpx;
     font-style: normal;
     font-weight: 400;
     line-height: 59px; /* 122.917% */
@@ -373,7 +376,7 @@ const ArtistOne = styled(Box)`
       rgba(0, 0, 0, 0) 12.12%,
       rgba(0, 0, 0, 0.78) 80.23%
     ),
-    url(Image/1.png) no-repeat, lightgray 50%;
+    url(Image/1.webp) no-repeat, lightgray 50%;
   background-size: cover;
   background-position: center center;
   box-shadow: 0px -31.67539px 64.85914px 0px rgba(0, 0, 0, 0.9);
@@ -391,7 +394,7 @@ const ArtistOne = styled(Box)`
         rgba(0, 0, 0, 0) 12.12%,
         rgba(0, 0, 0, 0.78) 80.23%
       ),
-      url(Image/9.png) no-repeat, lightgray 50%;
+      url(Image/1.webp)center top/ cover no-repeat;
     background-size: cover;
     background-position: center center;
     margin: auto;
@@ -407,7 +410,7 @@ const ArtistOne = styled(Box)`
         rgba(0, 0, 0, 0) 12.12%,
         rgba(0, 0, 0, 0.78) 80.23%
       ),
-      url(Image/9.png) no-repeat, lightgray 50%;
+      url(Image/1.webp)center top/ cover no-repeat;
     background-size: cover;
     background-position: center center;
   }
@@ -487,7 +490,7 @@ const ArtistTwoInOne = styled(Box)`
   margin: auto;
   box-shadow: 0px -31.67539px 64.85914px 0px rgba(0, 0, 0, 0.9);
   border-radius: 138.019px 138.019px 138.019px 0px;
-  background: url(Image/2.png), lightgray 50% / cover no-repeat;
+  background: url(Image/2.webp)center top/ cover no-repeat;
   @media (min-width: 1000px) and (max-width: 1350px) {
     width: 235px;
     height: 202px;
@@ -503,7 +506,7 @@ const ArtistTwoInOne = styled(Box)`
     justify-content: flex-end;
     align-items: center;
     border-radius: 138.953px 138.953px 138.953px 0px;
-    background: url(Image/7.png), lightgray 50% / cover no-repeat;
+    background: url(Image/2.webp)center top/ cover no-repeat;
   }
   @media (min-width: 768px) and (max-width: 991px) {
     width: 178px;
@@ -515,7 +518,7 @@ const ArtistTwoInOne = styled(Box)`
     justify-content: flex-end;
     align-items: center;
     border-radius: 138.953px 138.953px 138.953px 0px;
-    background: url(Image/7.png), lightgray 50% / cover no-repeat;
+    background: url(Image/2.webp)center top/ cover no-repeat;
   }
 `;
 
@@ -525,7 +528,7 @@ const ArtistTwoInTwo = styled(Box)`
   margin: 10px;
   border-top-left-radius: 24.342px;
   border-top-right-radius: 24.342px;
-  background: url(Image/3.png), lightgray 50% / cover no-repeat;
+  background: url(Image/3.webp)center top/ cover no-repeat;
   @media (min-width: 1000px) and (max-width: 1350px) {
     width: 235px;
     height: 102px;
@@ -540,7 +543,7 @@ const ArtistTwoInTwo = styled(Box)`
     justify-content: flex-end;
     align-items: center;
     border-radius: 0px;
-    background: url(Image/8.png), lightgray 50% / cover no-repeat;
+    background: url(Image/4.webp)center top/ cover no-repeat;
   }
   @media (min-width: 768px) and (max-width: 991px) {
     width: 178px;
@@ -548,7 +551,7 @@ const ArtistTwoInTwo = styled(Box)`
     margin: auto;
     border-top-left-radius: 24.342px;
     border-top-right-radius: 24.342px;
-    background: url(Image/3.png), lightgray 50% / cover no-repeat;
+    background: url(Image/3.webp)center top/ cover no-repeat;
   }
 `;
 
@@ -578,8 +581,8 @@ const ArtistAncors = styled(Box)`
     backdrop-filter: blur(29.5px);
   }
   @media (min-width: 768px) and (max-width: 991px) {
-    width: 80%;
-    padding: 20px;
+    // width: 80%;
+    // padding: 20px;
   }
 `;
 
@@ -612,8 +615,8 @@ const ArtistDancer = styled(Box)`
     backdrop-filter: blur(29.5px);
   }
   @media (min-width: 768px) and (max-width: 991px) {
-    width: 80%;
-    padding: 20px;
+    // width: 80%;
+    // padding: 20px;
   }
 `;
 
@@ -653,8 +656,8 @@ const CirculBox = styled(Box)`
     border: 0px solid rgba(255, 255, 255, 0.3);
   }
   @media (min-width: 768px) and (max-width: 991px) {
-    width: 80%;
-    padding: 20px;
+    // width: 80%;
+    // padding: 20px;
   }
 `;
 
@@ -759,7 +762,7 @@ const ArtistThree = styled(Box)`
   // border: 1px solid yellow;
   margin-top: 171px;
   border-radius: 140px 0px 0px 0px;
-  background: url(Image/4.png), lightgray 50% / cover no-repeat;
+  background: url(Image/4.webp) center top/ cover no-repeat;
   @media (min-width: 1000px) and (max-width: 1350px) {
     width: 235px;
 
@@ -775,7 +778,7 @@ const ArtistThree = styled(Box)`
     // border: 1px solid yellow;
     margin-top: 28px;
     border-radius: 140px 0px 0px 0px;
-    background: url(Image/4.png), lightgray 50% / cover no-repeat;
+    background: url(Image/4.webp) center top/ cover no-repeat;
   }
 `;
 
@@ -814,7 +817,7 @@ const ArtistNewOne = styled(Box)`
       rgba(0, 0, 0, 0.78) 16.42%,
       rgba(0, 0, 0, 0) 110.72%
     ),
-    url(Image/5.png), lightgray 50% / cover no-repeat;
+    url(Image/5.webp)center top/ cover no-repeat;
   @media (min-width: 1000px) and (max-width: 1350px) {
     width: 235px;
     height: 202px;
@@ -834,7 +837,7 @@ const ArtistNewOne = styled(Box)`
         rgba(0, 0, 0, 0.78) 16.42%,
         rgba(0, 0, 0, 0) 110.72%
       ),
-      url(Image/5.png), lightgray 50% / cover no-repeat;
+      url(Image/5.webp) center top/ cover no-repeat;
   }
 `;
 
@@ -849,7 +852,7 @@ const ArtistNewTwo = styled(Box)`
       rgba(0, 0, 0, 0.78) 16.42%,
       rgba(0, 0, 0, 0) 110.72%
     ),
-    url(Image/6.png), lightgray 50% / cover no-repeat;
+    url(Image/6.webp) center top/ cover no-repeat;
   @media (min-width: 1000px) and (max-width: 1350px) {
     width: 235px;
     height: 202px;
@@ -869,7 +872,7 @@ const ArtistNewTwo = styled(Box)`
         rgba(0, 0, 0, 0.78) 16.42%,
         rgba(0, 0, 0, 0) 110.72%
       ),
-      url(Image/6.png), lightgray 50% / cover no-repeat;
+      url(Image/6.webp) center top/ cover no-repeat;;
   }
 `;
 
@@ -947,7 +950,7 @@ const OnePgae = () => {
   const fetchData = async (inputValue) => {
     try {
       const response = await fetch(
-        `https://stagi.starclinch.com/search/autocomplete?q=${inputValue}`
+        `${apiUrlClinet}/search/autocomplete?q=${inputValue}`
       );
 
       if (!response.ok) {
@@ -985,6 +988,26 @@ const OnePgae = () => {
     }
   };
 
+
+
+  const fetchDataOne = async () => {
+    try {
+      const response = await fetch(`${apiUrlClinet}/search?q=${inputValue}`);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const handleKeyDown = async (event) => {
+    if (event.key === 'Enter') {
+      await fetchDataOne();
+      window.location.href = `/search?q=${inputValue}`;
+    }
+  };
+
+
   useEffect(() => {
     document.addEventListener("click", handleDocumentClick);
     return () => {
@@ -994,8 +1017,30 @@ const OnePgae = () => {
 
   return (
     <Fragment>
-      
+
       <MainBox>
+        <metadata>
+          <title>
+            Book Artists for Events - Hire Bands, Singers, Comedians, Celebrities, DJs - StarClinch
+          </title>
+          <meta name="robots" content="index, follow" />
+          <meta
+            name="description"
+            content="StarClinch - India&#039;s First Online Artist Booking &amp; Discovery Portal with EMI Payment Facility. 17,000+ Local &amp; International Artists / Acts | 14 Talent Categories, 450+ Cities | Artist in Every Budget"
+          />
+          <meta property="og:title" content="StarClinch.com" />
+          <meta property="og:url" content="https://starclinch.com" />
+          <meta property="og:site_name" content="StarClinch" />
+          <meta
+            property="og:image"
+            content="https://cdn.starclinch.in/starclinchcom/staticfiles/favicon.png"
+          />
+          <meta name="twitter:title" content="StarClinch" />
+          <meta
+            name="twitter:description"
+            content="StarClinch - India&#039;s First Online Artist Booking &amp; Discovery Portal with EMI Payment Facility. 17,000+ Local &amp; International Artists / Acts | 14 Talent Categories, 450+ Cities | Artist in Every Budget"
+          />
+        </metadata>
         <SecondBox>
           <SecondBoxOne>
             <ThirBox>
@@ -1012,11 +1057,12 @@ const OnePgae = () => {
                 <div sx={spotlightStyle}></div>
                 <SearchContainer>
                   <SearchInput
-                    type="text"
+                    type="search"
                     placeholder="🔍 Search for an artist"
                     value={inputValue}
                     onChange={handleInputChange}
                     onClick={() => setSuggestions([])}
+                    onKeyDown={handleKeyDown}
                   />
                 </SearchContainer>
                 <div ref={resultsContainerRef} className="autocomplete-results">
@@ -1046,26 +1092,26 @@ const OnePgae = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <Box>
                   <BookBox>
                     <BookText>
-                      Book a{" "}
-                      {
-                        <strong
+                      Your Event,Your Artist
+                      {/* {
+                        <nbsp
                           style={{
                             borderRight: "3px solid rgb(255, 141, 185)",
-                            borderTop: "1px solid rgb(255, 141, 185)",
-                            borderBottom: "2px solid rgb(255, 141, 185)",
+                           borderTop: "1px solid rgb(255, 141, 185)",
+                           borderBottom: "2px solid rgb(255, 141, 185)",
                             borderRadius: "0px 182.813px 182.813px 0px",
-                            // padding: "12px",
+                            padding: "18px",
                             flexShrink: "0",
                           }}
                           className="responsive-span"
                         >
-                          Celebrity
-                        </strong>
-                      }
+                          
+                        </nbsp> */}
+                      
                     </BookText>
                     <BookTextSec>
                       <strong style={{ color: "rgba(255, 255, 255, 0.40)" }}>
@@ -1089,7 +1135,7 @@ const OnePgae = () => {
                             <CirclleThirdBox>
                               <div style={containerStyle}>
                                 <Typography variant="h4" id="text">
-                                  {/* YEARS OF ⭐ EXCELLENCE IN EN-TECH IN STARTUP */}
+                                YEARS OF EXCELLENCE IN ARTIST BOOKING ⭐
                                 </Typography>
                               </div>
                               <Box>
@@ -1106,14 +1152,14 @@ const OnePgae = () => {
                           <Box>
                             <ArtistTwoInOne>
                               <ArtistAncors>
-                                <AncoresText>Ancors</AncoresText>
+                                <AncoresText>Singer</AncoresText>
                               </ArtistAncors>
                             </ArtistTwoInOne>
                           </Box>
                           <Box>
                             <ArtistTwoInTwo>
                               <ArtistDancer>
-                                <DancerText>Dancers</DancerText>
+                                <DancerText>Comedian</DancerText>
                               </ArtistDancer>
                             </ArtistTwoInTwo>
                           </Box>

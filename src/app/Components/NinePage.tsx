@@ -145,7 +145,7 @@ const SneakParkBox = styled(Box)`
   @media (min-width: 991px) and (max-width: 1550px) {
     color: #fff;
     font-family: Inter;
-    font-size: 42px;
+    font-size: 1.68vw;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -173,7 +173,7 @@ const FormText = styled(Typography)`
   padding-top: 10px;
   opacity: 0.6;
   @media (min-width: 991px) and (max-width: 1550px) {
-    font-size: 22px;
+    font-size: 1.155vw;
   }
 `;
 
@@ -201,7 +201,7 @@ const TakeBox = styled(Box)`
   );
   backdrop-filter: blur(5.078125px);
   @media (min-width: 991px) and (max-width: 1550px) {
-    height: 35px;
+    height: 65px;
   }
 `;
 
@@ -215,7 +215,7 @@ const TakeInsta = styled(Box)`
 const TakeGramText = styled(Typography)`
   color: #fff;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 1.26vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

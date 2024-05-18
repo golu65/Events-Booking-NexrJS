@@ -1,0 +1,705 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-inter: Inter;
+  
+    /* font sizes */
+    --font-size-5xl: 24px;
+  
+    /* Colors */
+    --color-white: #fff;
+  
+    /* Paddings */
+    --padding-101xl: 120px;
+  
+    /* Border radiuses */
+    --br-721xl: 740px;
+    --br-646xl-1: 665.1px;
+    --br-322xl: 341px;
+    --br-321xl-9: 340.9px;
+  }
+  
+  .group-childThankYouOne {
+    top: 220px;
+    left: -241.6px;
+    border-radius: 340.97px 340.97px 340.97px 340.86px;
+    background: linear-gradient(221.27deg, #70771a, rgba(0, 0, 0, 0.02));
+    backdrop-filter: blur(113.66px);
+    width: 322px;
+    height: 325.8px;
+    overflow: hidden;
+    transform: rotate(53.35deg);
+  }
+  .frame-parentThankYouOne,
+  .group-childThankYouOne,
+  .group-itemThankYouOne {
+    position: absolute;
+    transform-origin: 0 0;
+  }
+  .group-itemThankYouOne {
+    top: 107.1px;
+    left: -138.2px;
+    border-radius: var(--br-646xl-1) 0 0 0;
+    background: linear-gradient(
+      221.27deg,
+      rgba(127, 121, 70, 0.41),
+      rgba(0, 0, 0, 0.01)
+    );
+    backdrop-filter: blur(86.46px);
+    width: 404.1px;
+    height: 688.1px;
+    overflow: hidden;
+    transform: rotate(141.84deg);
+  }
+  .frame-parentThankYouOne {
+    margin: 0 !important;
+    top: 475.8px;
+    left: 187.2px;
+    width: 578.9px;
+    height: 690.7px;
+    transform: rotate(142.22deg);
+    z-index: 0;
+  }
+  .frame-divThankYouOne,
+  .group-innerThankYouOne {
+    position: absolute;
+    overflow: hidden;
+    transform-origin: 0 0;
+  }
+  .group-innerThankYouOne {
+    top: 0;
+    left: 226.7px;
+    border-radius: 340.97px 340.97px 340.97px 340.86px;
+    background: linear-gradient(221.27deg, #70771a, rgba(0, 0, 0, 0.02));
+    backdrop-filter: blur(113.66px);
+    width: 272.5px;
+    height: 226.3px;
+    transform: rotate(89.07deg);
+  }
+  .frame-divThankYouOne {
+    top: 21.3px;
+    left: 4.7px;
+    border-radius: var(--br-646xl-1) 0 0 0;
+    background: linear-gradient(
+      221.27deg,
+      rgba(92, 127, 70, 0.41),
+      rgba(0, 0, 0, 0.01)
+    );
+    backdrop-filter: blur(86.46px);
+    width: 380.8px;
+    height: 582.3px;
+    transform: rotate(0.46deg);
+  }
+  .frame-groupThankYouOne {
+    position: absolute;
+    margin: 0 !important;
+    top: 542px;
+    left: 1647px;
+    width: 385.4px;
+    height: 606.6px;
+    z-index: 1;
+  }
+
+  @media (min-width: 1000px) and (max-width: 1510px) {
+    .frame-groupThankYouOne {
+        position: absolute;
+        margin: 0 !important;
+        top: 542px;
+        left: 1289px;
+        width: 385.4px;
+        height: 606.6px;
+        z-index: 1;
+      }
+    
+  }
+
+  .all-categoriesThankYouOne {
+    flex: 1;
+    position: relative;
+  }
+  .cancel-selectionThankYouOne {
+    position: relative;
+    font-size: 18px;
+    color: var(--color-white);
+    text-align: right;
+    display: none;
+  }
+  .all-categories-comedians-z-parentThankYouOne {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .frame-wrapperThankYouOne {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 60px var(--padding-101xl);
+    box-sizing: border-box;
+  }
+  .zakir-khan-1ThankYouOne {
+    position: relative;
+    border-radius: 93px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgba(8, 8, 16, 0) 41.23%,
+      rgba(8, 8, 16, 0.53) 70.57%,
+      rgba(8, 8, 16, 0.67)
+    );
+    width: 459px;
+    height: 731.6px;
+  }
+  .component-29ThankYouOne,
+  .zakir-khan-1-wrapper {
+    border-radius: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .component-29ThankYouOne {
+    border-radius: 166px;
+    width: 459px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .check-your-mailboxThankYouOne {
+    position: relative;
+    font-weight: 600;
+  }
+  .your-order-idThankYouOne {
+    position: relative;
+    font-size: var(--font-size-5xl);
+    color: rgba(255, 255, 255, 0.89);
+  }
+  .check-your-mailbox-parentThankYouOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .we-have-begunThankYouOne {
+    position: relative;
+  }
+  .we-have-begun-looking-for-excl-wrapperThankYouOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .akashstarclinchcomThankYouOne {
+    font-weight: 500;
+    background: linear-gradient(
+      185.5deg,
+      rgba(255, 253, 253, 0.36),
+      rgba(150, 253, 191, 0.8),
+      rgba(89, 143, 67, 0.8) 48.23%,
+      rgba(37, 41, 44, 0.8) 99.42%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .frame-parent2ThankYouOne,
+  .frame-parent3ThankYouOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .frame-parent3ThankYouOne {
+    gap: 16px;
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+  }
+  .frame-parent2ThankYouOne {
+    gap: 63px;
+  }
+  .component-29-parentThankYouOne {
+    position: absolute;
+    top: 56px;
+    left: 56px;
+    width: 1541px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--padding-101xl) 0 0;
+    box-sizing: border-box;
+  }
+
+
+  @media (min-width: 1000px) and (max-width: 1510px) {
+    .component-29-parentThankYouOne {
+        position: absolute;
+        top: 56px;
+        left: 56px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--padding-101xl) 0 0;
+        box-sizing: border-box;
+        margin: auto;
+      }
+  }
+  
+
+
+  .frame-childThankYouOne,
+  .frame-innerThankYouOne,
+  .frame-itemThankYouOne,
+  .group-iconThankYouOne {
+    position: absolute;
+    top: 756px;
+    left: 125px;
+    width: 284.2px;
+    height: 592.5px;
+    opacity: 0;
+  }
+  .frame-innerThankYouOne,
+  .frame-itemThankYouOne,
+  .group-iconThankYouOne {
+    top: 869px;
+    left: 536px;
+  }
+  .frame-innerThankYouOne,
+  .group-iconThankYouOne {
+    top: 664px;
+    left: 858px;
+    width: 328px;
+    height: 487px;
+  }
+  .group-iconThankYouOne {
+    top: 705px;
+    left: 1313px;
+    width: 390px;
+    height: 665px;
+  }
+  .frame-parent1ThankYouOne {
+    position: relative;
+    border-radius: 100px;
+    background: linear-gradient(178.8deg, #141429, transparent);
+    box-shadow: 0 14px 41px rgba(0, 0, 0, 0.6) inset;
+    backdrop-filter: blur(50px);
+    width: 1680px;
+    height: 866.7px;
+    font-size: 56px;
+    color: rgba(255, 253, 253, 0.8);
+  }
+
+  @media (min-width: 1000px) and (max-width: 1510px) {
+    .frame-parent1ThankYouOne {
+        position: relative;
+        border-radius: 100px;
+        background: linear-gradient(178.8deg, #141429, transparent);
+        box-shadow: 0 14px 41px rgba(0, 0, 0, 0.6) inset;
+        backdrop-filter: blur(50px);
+        width: 88%;
+        height: 866.7px;
+        font-size: 56px;
+        color: rgba(255, 253, 253, 0.8);
+        margin: auto;
+      }
+  }
+  
+
+  .frame-containerThankYouOne {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+  }
+  .gtq-childThankYouOne {
+    position: absolute;
+    margin: 0 !important;
+    top: 145px;
+    left: calc(50% - 501px);
+    border-radius: var(--br-721xl) var(--br-721xl) 0 0;
+    width: 1019px;
+    height: 941px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+    z-index: 3;
+  }
+  .gtq-child1ThankYouOne,
+  .gtq-child2ThankYouOne,
+  .gtq-innerThankYouOne,
+  .gtq-itemThankYouOne {
+    position: absolute;
+    margin: 0 !important;
+    top: 1297px;
+    left: 558px;
+    width: 284.2px;
+    height: 592.5px;
+    opacity: 0;
+    z-index: 4;
+  }
+  .gtq-child1ThankYouOne,
+  .gtq-child2ThankYouOne,
+  .gtq-innerThankYouOne {
+    top: 988px;
+    left: 95px;
+    z-index: 5;
+  }
+  .gtq-child1ThankYouOne,
+  .gtq-child2ThankYouOne {
+    top: 1031px;
+    left: 1008px;
+    width: 328px;
+    height: 487px;
+    z-index: 6;
+  }
+  .gtq-child2ThankYouOne {
+    top: 1135px;
+    left: 1469px;
+    width: 463px;
+    height: 694px;
+    z-index: 7;
+  }
+  .gtqThankYouOne {
+    position: relative;
+    background-color: #080810;
+    width: 100%;
+    height: 1106px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--font-inter);
+  }
+  
+  @media (min-width: 1000px) and (max-width: 1510px) {
+    .gtqThankYouOne {
+        position: relative;
+        background-color: #080810;
+        width: 100%;
+        height: 1106px;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: var(--font-size-5xl);
+        color: rgba(255, 255, 255, 0.5);
+        font-family: var(--font-inter);
+      }
+  }
+
+
+/* Mobile Version In CSS */
+.group-childGTQFinalOne,
+.group-item {
+  position: absolute;
+  overflow: hidden;
+  transform-origin: 0 0;
+}
+.group-childGTQFinalOne {
+  top: 1rem;
+  left: 0.52rem;
+  border-radius: 205.07px 205.07px 205.07px var(--br-186xl);
+  background: linear-gradient(221.27deg, #70771a, rgba(0, 0, 0, 0.02));
+  backdrop-filter: blur(68.36px);
+  width: 10.24rem;
+  height: 8.51rem;
+  transform: rotate(89.07deg);
+}
+.group-itemGTQFinalOne {
+  top: 0.8rem;
+  left: 0.18rem;
+  border-radius: var(--br-381xl) 0 0 0;
+  background: linear-gradient(
+    221.27deg,
+    rgba(92, 127, 70, 0.41),
+    rgba(0, 0, 0, 0.01)
+  );
+  backdrop-filter: blur(52px);
+  width: 14.31rem;
+  height: 21.89rem;
+  transform: rotate(0.46deg);
+}
+.frame-parentGTQFinalOne {
+  position: absolute;
+  margin: 0 !important;
+  top: 20.63rem;
+  left: 14.06rem;
+  width: 14.49rem;
+  height: 22.8rem;
+  z-index: 0;
+}
+.all-categoriesGTQFinalOne {
+  flex: 1;
+  position: relative;
+}
+.all-categories-comedians-z-wrapperGTQFinalOne {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.frame-wrapperGTQFinalOne {
+  width: 24.38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.76rem 1.52rem;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.group-innerGTQFinalOne {
+  top: 0.67rem;
+  left: -8.52rem;
+  border-radius: 205.07px 205.07px 205.07px var(--br-186xl);
+  background: linear-gradient(221.27deg, #70771a, rgba(0, 0, 0, 0.02));
+  backdrop-filter: blur(68.36px);
+  width: 10.24rem;
+  height: 8.51rem;
+  overflow: hidden;
+  transform: rotate(91.97deg);
+}
+.frame-divGTQFinalOne,
+.frame-groupGTQFinalOne,
+.group-innerGTQFinalOne {
+  position: absolute;
+  transform-origin: 0 0;
+}
+.frame-divGTQFinalOne {
+  /* top: 5.08rem;
+  left: .56rem; */
+  border-radius: var(--br-381xl) 0 0 0;
+  background: linear-gradient(
+    221.27deg,
+    rgba(127, 121, 70, 0.41),
+    rgba(0, 0, 0, 0.01)
+  );
+  backdrop-filter: blur(52px);
+  width: 10.55rem;
+  height: 21.89rem;
+  overflow: hidden;
+  transform: rotate(-179.42deg);
+}
+.frame-groupGTQFinalOne {
+  margin: 0 !important;
+  top: 40.17rem;
+  left: -5.84rem;
+  width: 15.11rem;
+  height: 21.97rem;
+  transform: rotate(-178.96deg);
+  z-index: 0;
+}
+.zakir-khan-1GTQFinalOne {
+  flex: 1;
+  position: relative;
+  border-radius: 28px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(8, 8, 16, 0) 41.23%,
+    #141419
+  );
+  height: 13.46rem;
+ 
+}
+.component-29GTQFinalOne,
+.zakir-khan-1-wrapperGTQFinalOne {
+  display: flex;
+  justify-content: flex-start;
+}
+.zakir-khan-1-wrapperGTQFinalOne {
+  align-self: stretch;
+  border-radius: 12.95px;
+  flex-direction: row;
+  align-items: flex-start;
+
+}
+.component-29GTQFinalOne {
+  border-radius: 48.87px;
+  width: 19.38rem;
+  height: 12.94rem;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.frame-childGTQFinalOne {
+  position: absolute;
+  margin: 0 !important;
+  top: 8.35rem;
+  left: 0.37rem;
+  background: linear-gradient(180deg, rgba(6, 6, 12, 0), #0b0b16);
+  width: 19.63rem;
+  height: 7.81rem;
+  z-index: 3;
+}
+.check-your-mailboxGTQFinalOne {
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  width: 18.19rem;
+}
+.your-order-idGTQFinalOne {
+  position: relative;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+}
+.check-your-mailbox-parentGTQFinalOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  color: rgba(255, 253, 253, 0.8);
+}
+.we-have-begunGTQFinalOne {
+  align-self: stretch;
+  position: relative;
+}
+.akashstarclinchcomGTQFinalOne {
+  font-weight: 500;
+  background: linear-gradient(
+    185.5deg,
+    rgba(255, 253, 253, 0.36),
+    rgba(150, 253, 191, 0.8),
+    rgba(89, 143, 67, 0.8) 48.23%,
+    rgba(37, 41, 44, 0.8) 99.42%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.frame-parent2GTQFinalOne {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.81rem;
+}
+.continue-exploring-starclinchGTQFinalOne {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+  top: -3rem;
+  background: linear-gradient(
+    132.67deg,
+    rgba(255, 253, 253, 0.36),
+    rgba(255, 227, 226, 0.8),
+    rgba(241, 102, 51, 0.8) 29.48%,
+    rgba(253, 45, 125, 0.8) 64.9%,
+    rgba(21, 18, 18, 0.8) 99.42%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.frame-parent1GTQFinalOne {
+  height: 21rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+}
+.frame-containerGTQFinalOne,
+.group-containerGTQFinalOne {
+  display: flex;
+  align-items: flex-start;
+}
+.group-containerGTQFinalOne {
+  height: 55.94rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.frame-containerGTQFinalOne {
+  align-self: stretch;
+  border-radius: 44px;
+  background: linear-gradient(178.8deg, #141429, transparent);
+  box-shadow: 0 4px 33px rgba(0, 0, 0, 0.9) inset;
+  backdrop-filter: blur(28px);
+  height: 35.13rem;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+}
+.frame-innerGTQFinalOne,
+.frame-itemGTQFinalOne {
+  position: absolute;
+  margin: 0 !important;
+  top: 35.13rem;
+  left: 2.38rem;
+  width: 11.36rem;
+  height: 23.69rem;
+  opacity: 1;
+  z-index: 3;
+}
+.frame-innerGTQFinalOne {
+  top: 34.38rem;
+  left: 15.16rem;
+  opacity: 0.05;
+  z-index: 4;
+}
+.group-parentGTQFinalOne {
+  position: relative;
+  width: 100%;
+  height: 40.56rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1.5rem;
+  margin-top: 5rem;
+  box-sizing: border-box;
+  gap: 2rem;
+  text-align: left;
+  font-size: 0.63rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-inter);
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+
+  /* font sizes */
+  --font-size-base: 1rem;
+
+  /* Colors */
+  --color-white: #fff;
+
+  /* Border radiuses */
+  --br-381xl: 400px;
+  --br-186xl-1: 205.1px;
+  --br-186xl: 205px;
+}

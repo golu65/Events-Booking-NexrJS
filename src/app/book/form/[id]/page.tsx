@@ -5,13 +5,13 @@
 import React, { useState, useEffect } from "react";
 import "./pyrformtwo.css";
 import { Box, styled, Modal } from "@mui/material";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-
-// import baseURL from "../../../apiConfig";
+import apiUrlClinet from '../../../../../urlconfig'
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MdCall } from "react-icons/md";
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
+import NavbarOne from "@/app/MainNavbar/NavbarOne";
+import Footer from "@/app/Page/Footer";
 // import Link from "next/link";
 
 const MainBox = styled(Box)`
@@ -114,12 +114,6 @@ const page = (props) => {
     };
   }, []);
 
-  // const artistName = localStorage.getItem("artistName");
-  // const artistProfilePic = localStorage.getItem("artistProfilePic");
-  // const categoryName = localStorage.getItem("categoryName");
-  // const artistId = localStorage.getItem("artistId");
-
-  // const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
 
   const date = searchParams.get("date");
@@ -163,12 +157,11 @@ const page = (props) => {
   });
 
   const [loadingFormLoaderPyr, setLoadingFormLoaderPyr] = useState(false);
+
   const handleFormSubmit = async (e) => {
     setLoadingFormLoaderPyr(true);
-    console.log("Form Data:", formDataOneEvent);
-
     try {
-      const response = await fetch("https://stagi.starclinch.com/book/save", {
+      const response = await fetch(`${apiUrlClinet}/book/save`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -176,9 +169,16 @@ const page = (props) => {
         body: JSON.stringify(formDataOneEvent),
       });
       const responseData = await response.json();
+      // console.log(responseData);
       if (response.ok) {
         // If successful, navigate to "/thankyou"
-        router("/book/ThankYou");
+        // setResponseData(responseData);
+        // setSharedState({ id: responseData.id, email: responseData.email, typeform: responseData.typeform });
+        localStorage.setItem('sharedDataPyr', JSON.stringify({ id: responseData.id, email: responseData.email, typeform: responseData.typeform }));
+        console.log(responseData)
+        // navigationgtq(`/ThankOne/${responseData.id}`);
+        window.location.href = `/book/thanksyou/${responseData.id}`;
+        
       } else {
         // Handle errors or display appropriate messages
         console.error("Error submitting form:", responseData.error);
@@ -195,7 +195,7 @@ const page = (props) => {
     email: "",
     phone: "",
     information: "",
-    agree: "",
+    agree: true,
   });
 
   const handleInputChange = (e) => {
@@ -288,7 +288,7 @@ const page = (props) => {
         type: "pyr",
       };
 
-      const response = await fetch("https://stagi.starclinch.com/cart/otp/", {
+      const response = await fetch(`${apiUrlClinet}/cart/otp/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -326,7 +326,7 @@ const page = (props) => {
         return;
       }
 
-      const verifyResponse = await fetch("https://stagi.starclinch.com/cart/otp/verify/", {
+      const verifyResponse = await fetch(`${apiUrlClinet}/cart/otp/verify/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -389,7 +389,7 @@ const page = (props) => {
   }, [timerInterval]);
 
   const handleSendOTP = async (method) => {
-    const apiUrl = "https://stagi.starclinch.com/cart/otp/resend/";
+    const apiUrl = `${apiUrlClinet}/cart/otp/resend/`;
 
     const jsonData = {
       mobile: formDataOneEvent.phone,
@@ -415,6 +415,7 @@ const page = (props) => {
 
   return (
     <MainBox>
+      <NavbarOne/>
       {isMobileView ? (
         <>
           <Box className="frame-parentGTQMobileOne">
@@ -722,7 +723,7 @@ const page = (props) => {
                               </Box>
                               <Box className="frame-divMobileGTQOTP">
                                 <Box className="verify-wrapperMobileGTQOTP">
-                                  <Link
+                                  <Box
                                     style={{
                                       textDecoration: "none",
                                       color: "white",
@@ -737,7 +738,7 @@ const page = (props) => {
                                     >
                                       Verify
                                     </Box>
-                                  </Link>
+                                  </Box>
                                 </Box>
 
                                 <Box className="verify-without-otpMobileGTQOTP">
@@ -831,7 +832,7 @@ const page = (props) => {
                         </Box>
                         <Box className="frame-wrapper3ProFormOne">
                           <Box className="your-name-parentProFormOne">
-                            <Box className="your-nameProFormOne">
+                            <Box className="your-nameProFormOneSame">
                               Email (We dont spam)
                             </Box>
                             <input
@@ -856,6 +857,7 @@ const page = (props) => {
                                   color: "red",
                                   fontSize: "18px",
                                   fontWeight: "bold",
+                                  marginLeft:'-53px',
                                 }}
                               >
                                 {errorsPyr.email}
@@ -902,7 +904,7 @@ const page = (props) => {
                         </Box>
                         <Box className="frame-wrapper3ProFormOne">
                           <Box className="your-name-parentProFormOne">
-                            <Box className="your-nameProFormOne">
+                            <Box className="your-nameProFormOneSame">
                               Tell us more we love to listen 200 words
                             </Box>
 
@@ -928,6 +930,7 @@ const page = (props) => {
                                   color: "red",
                                   fontSize: "18px",
                                   fontWeight: "bold",
+                                  marginLeft:'-53px',
                                 }}
                               >
                                 {errorsPyr.information}
@@ -983,10 +986,10 @@ const page = (props) => {
               >
                 <Box sx={style}>
                   <Box>
-                    <div className="frame-parentOtpNextJs">
-                      <div className="frame-groupOtpNextJs">
-                        <div className="enter-your-otp-here-parentOtpNextJs">
-                          <div className="enter-your-otpOtpNextJs">Enter your OTP here</div>
+                    <div className="frame-parentMobileGTQOTP">
+                      <div className="frame-groupMobileGTQOTP">
+                        <div className="enter-your-otp-here-parentMobileGTQOTP">
+                          <div className="enter-your-otpMobileGTQOTP">Enter your OTP here</div>
                           <div >
                             <Box
                               className="otp-input"
@@ -1003,11 +1006,13 @@ const page = (props) => {
                                     id={`otp-input-${index}`}
                                     style={{
                                       color: 'white',
-                                      outline: "block",
+                                     background:'black',
                                       border: '1px solid white',
-                                      textAlign:'center'
+                                      textAlign:'center',
+                                      height: '53px',
+                                      borderRadius: '14px'
                                     }}
-                                    className="frame-wrapperOtpNextJs"
+                                    className="frame-wrapperFormOTP"
                                     value={otpValue[index] || ""}
                                     onChange={(e) => handleChange(e, index)}
                                     onKeyPress={(e) => handleKeyPress(e, index)}
@@ -1028,31 +1033,31 @@ const page = (props) => {
                             )}
                           </div>
                         </div>
-                        <div className="divOtpNextJs">{`00:${otpTimer
+                        <div className="divMobileGTQOTP">{`00:${otpTimer
                           .toString()
                           .padStart(2, "0")}`}</div>
 
                       </div>
-                      <div className="frame-containerOtpNextJs">
-                        <div className="didnt-recieve-the-otp-parentOtpNextJs">
-                          <div className="enter-your-otpOtpNextJs">Didn’t recieve the otp </div>
-                          <div className="resend-with-parent">
-                            <div className="enter-your-otp" onClick={() => handleSendOTP("mobile")} style={{ cursor: "pointer" }}>Resend with:</div>
-                            <div className="logoswhatsapp-icon-parent" style={{display:'flex'}}>
+                      <div className="frame-containerMobileGTQOTP">
+                        <div className="enter-your-otp-here-parentMobileGTQOTP">
+                          <div className="enter-your-otpMobileGTQOTP">Didn’t recieve the otp </div>
+                          <div className="resend-with-parentMobileGTQOTP">
+                            <div className="enter-your-otpMobileGTQOTP" onClick={() => handleSendOTP("mobile")} style={{ cursor: "pointer" }}>Resend with:</div>
+                            <div className="logoswhatsapp-icon-parentMobileGTQOTP" style={{display:'flex'}}>
                               <FaWhatsapp
                                 onClick={() => handleSendOTP("whatsapp")}
                                 style={{ cursor: "pointer", color: "#25d366" }}
-                                className="logoswhatsapp-iconOtpNextJs"
+                                className="logoswhatsapp-iconMobileGTQOTP"
                               />
 
                               <MdEmail
-                                className="logoswhatsapp-iconOtpNextJs"
+                                className="logoswhatsapp-iconMobileGTQOTP"
                                 onClick={() => handleSendOTP("email")}
                                 style={{ cursor: "pointer" }}
                               />
 
                               <MdCall
-                                className="logoswhatsapp-iconOtpNextJs"
+                                className="logoswhatsapp-iconMobileGTQOTP"
                                 onClick={() => handleSendOTP("mobile")}
                                 style={{ cursor: "pointer" }}
                               />
@@ -1060,19 +1065,133 @@ const page = (props) => {
                           </div>
                         </div>
                       </div>
-                      <div className="frame-divOtpNextJs" style={{ cursor: "pointer" }}>
-                        <div className="verify-wrapperOtpNextJs" onClick={(e) => {
+                      <div className="frame-divMobileGTQOTP" style={{ cursor: "pointer" }}>
+                        <div className="verify-wrapperMobileGTQOTP" onClick={(e) => {
                           handleLoaderPyr();
                           handleVerification(e);
                         }}>
                           <div className="enter-a-4-digitOtpNextJs">Verify</div>
                         </div>
-                        {/* <div className="verify-without-otpOtpNextJs">Verify without OTP</div> */}
+                     
                       </div>
                     </div>
               
                   </Box>
                 </Box>
+                 {/* <Box sx={style}>
+                              <Box>
+                                <Box className="frame-parentMobileGTQOTP">
+                                  <Box className="frame-groupMobileGTQOTP">
+                                    <Box className="enter-your-otp-here-parentMobileGTQOTP">
+                                      <Box className="enter-your-otpMobileGTQOTP">
+                                        Enter your OTP here
+                                      </Box>
+                                      <Box style={{ display: "flex" }}>
+                                        {Array(numInputs)
+                                          .fill("")
+                                          .map((_, index) => (
+                                            <input
+                                              key={index}
+                                              type="text"
+                                              maxLength="4"
+                                              id={`otp-input-${index}`}
+                                              style={{
+                                                color: 'white',
+                                                outline: "block",
+                                                border: '1px solid white',
+                                                textAlign: 'center'
+                                              }}
+                                              className="frame-wrapperFormOTP"
+                                              value={otpValue[index] || ""}
+                                              onChange={(e) => handleChange(e, index)}
+                                              onKeyPress={(e) =>
+                                                handleKeyPress(e, index)
+                                              }
+                                            />
+                                          ))}
+                                      </Box>
+                                      {otpErrorPyr && (
+                              <Box
+                                style={{
+                                  color: "red",
+                                  textAlign: "center",
+                                  fontSize: "18px",
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                {errorMessagePyr}
+                              </Box>
+                            )}
+                                    </Box>
+                                    <Box className="divMobileGTQOTP">{`00:${otpTimer
+                                      .toString()
+                                      .padStart(2, "0")}`}</Box>
+                                  </Box>
+                                  <Box className="frame-containerMobileGTQOTP">
+                                    <Box className="enter-your-otp-here-parentMobileGTQOTP">
+                                      <Box className="enter-your-otpMobileGTQOTP">
+                                        Didn’t recieve the otp ?
+                                      </Box>
+                                      <Box className="resend-with-parentMobileGTQOTP">
+                                        <Box className="enter-your-otpMobileGTQOTP">
+                                          Resend with:
+                                        </Box>
+                                        <Box className="logoswhatsapp-icon-parentMobileGTQOTP">
+                                          <img
+                                            className="logoswhatsapp-iconMobileGTQOTP"
+                                            alt=""
+                                            src="Image/otp1.svg"
+                                            onClick={() =>
+                                              handleSendOTP("whatsapp")
+                                            }
+                                            style={{ cursor: "pointer" }}
+                                          />
+
+                                          <img
+                                            className="logoswhatsapp-iconMobileGTQOTP"
+                                            alt=""
+                                            src="Image/otp2.svg"
+                                            onClick={() =>
+                                              handleSendOTP("email")
+                                            }
+                                            style={{ cursor: "pointer" }}
+                                          />
+
+                                          <img
+                                            className="logoswhatsapp-iconMobileGTQOTP"
+                                            alt=""
+                                            src="Image/otp3.svg"
+                                            onClick={() =>
+                                              handleSendOTP("mobile")
+                                            }
+                                            style={{ cursor: "pointer" }}
+                                          />
+                                        </Box>
+                                      </Box>
+                                    </Box>
+                                  </Box>
+                                  <Box className="frame-divMobileGTQOTP">
+                                    <Box className="verify-wrapperMobileGTQOTP">
+                                      <Box
+                                        className="enter-a-4-digitMobileGTQOTP"
+                                        onClick={(e) => {
+                                          handleOpenLoader();
+                                          handleVerification(e);
+                                        }}
+                                      >
+                                        Verify OTP --&gt;
+                                      </Box>
+                                    </Box>
+                                    <Box
+                                      className="verify-without-otpMobileGTQOTP"
+                                      onClick={handleVerifyWithoutOTP}
+                                    >
+                                      Verify without OTP
+                                    </Box>
+                                  </Box>
+                                </Box>
+                              </Box>
+                            </Box> */}
               </Modal>
             </Box>
             {loadingFormLoaderPyr && (
@@ -1090,6 +1209,7 @@ const page = (props) => {
           </Box>
         </>
       )}
+      <Footer/>
     </MainBox>
   );
 };

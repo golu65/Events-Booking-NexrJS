@@ -1,0 +1,684 @@
+
+.frame-childCareerMobileTwoLineOne {
+    position: absolute;
+    top: calc(50% - 471px);
+    left: calc(30% - 179.5px);
+    border-radius: 7377.27px;
+    width: 56.27rem;
+    height: 58.04rem;
+    overflow: hidden;
+    opacity: 0.7;
+    background: #11232C;
+    box-shadow: 0px 16.39394px 54.9197px 0px rgba(0, 0, 0, 0.38) inset;
+  }
+  .group-childCareerMobileTwoLineOne,
+  .group-innerCareerMobileTwoLineOne,
+  .group-itemCareerMobileTwoLineOne {
+    position: absolute;
+    height: 98.11%;
+    width: 100%;
+    top: 1.89%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 0.7px solid var(--color-gray-300);
+    box-sizing: border-box;
+    opacity: 0.35;
+  }
+  .group-innerCareerMobileTwoLineOne,
+  .group-itemCareerMobileTwoLineOne {
+    height: 79.96%;
+    width: 81.3%;
+    top: 11.09%;
+    right: 9.36%;
+    bottom: 8.94%;
+    left: 9.34%;
+    border: 0.7px dashed var(--color-gray-300);
+  }
+  .group-innerCareerMobileTwoLineOne {
+    height: 52.85%;
+    width: 53.74%;
+    top: 24.64%;
+    right: 23.13%;
+    bottom: 22.51%;
+    left: 23.13%;
+    border: 0.7px solid var(--color-gray-300);
+  }
+  .group-child1CareerMobileTwoLineOne {
+    position: absolute;
+    bottom: 13.59rem;
+    left: 29.08rem;
+    border-radius: 389.7px;
+    background: linear-gradient(
+      152.18deg,
+      rgba(164, 150, 253, 0.29),
+      rgba(96, 67, 143, 0.29) 48.23%,
+      rgba(8, 8, 16, 0.29)
+    );
+    width: 4.5rem;
+    height: 4.66rem;
+    overflow: hidden;
+    transform: rotate(125.18deg);
+    transform-origin: 0 0;
+    opacity: 0.61;
+  }
+  .group-child2CareerMobileTwoLineOne,
+  .group-child3CareerMobileTwoLineOne {
+    position: absolute;
+    height: 6.26%;
+    width: 6.37%;
+    top: 63.77%;
+    right: 26.18%;
+    bottom: 29.96%;
+    left: 67.45%;
+    border-radius: var(--br-11xl-6);
+    background-color: var(--color-gray-500);
+    backdrop-filter: blur(16.36px);
+    overflow: hidden;
+  }
+  .group-child3CareerMobileTwoLineOne {
+    top: 36.98%;
+    right: 71.25%;
+    bottom: 56.75%;
+    left: 22.38%;
+  }
+  .frame-itemCareerMobileTwoLineOne {
+    position: relative;
+    border-radius: 23.22px;
+    background: linear-gradient(
+      142.16deg,
+      rgba(255, 253, 253, 0.36),
+      rgba(150, 253, 191, 0.8),
+      rgba(89, 143, 67, 0.8) 48.23%,
+      rgba(37, 41, 44, 0.8) 99.42%
+    );
+    width: 3.39rem;
+    height: 0.2rem;
+  }
+  .rectangle-wrapperCareerMobileTwoLineOne {
+    border-radius: 23.22px;
+    background-color: var(--color-gray-400);
+    backdrop-filter: blur(16.36px);
+    width: 5.84rem;
+    padding: 0.03rem;
+    box-sizing: border-box;
+  }
+  .more-talent-wanted-parentCareerMobileTwoLineOne,
+  .rectangle-wrapperCareerMobileTwoLineOne,
+  .sales-team-parentCareerMobileTwoLineOne {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sales-team-parentCareerMobileTwoLineOne {
+    gap: 0.13rem;
+    font-size: 0.91rem;
+  }
+  .more-talent-wanted-parentCareerMobileTwoLineOne {
+    position: absolute;
+    top: calc(50% + 19px);
+    left: calc(50% - 144px);
+    border-radius: 4.22px;
+    background: linear-gradient(
+      89.37deg,
+      rgba(255, 255, 255, 0),
+      rgba(122, 207, 120, 0.13) 45.58%,
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(21.11px);
+    overflow: hidden;
+    padding: 0.3rem;
+    gap: 0.31rem;
+  }
+  .design-teamCareerMobileTwoLineOne {
+    position: relative;
+    font-size: 1.07rem;
+  }
+  .frame-innerCareerMobileTwoLineOne {
+    position: relative;
+    border-radius: 23.22px;
+    background: linear-gradient(
+      143.05deg,
+      rgba(255, 227, 226, 0.9),
+      rgba(255, 121, 112, 0.9) 0.01%,
+      rgba(231, 62, 127, 0.9)
+    );
+    width: 5.25rem;
+    height: 0.2rem;
+  }
+  .more-talent-wanted-groupCareerMobileTwoLineOne {
+    position: absolute;
+    top: calc(50% - 140px);
+    left: calc(50% + 51px);
+    border-radius: 4.22px;
+    background: linear-gradient(
+      184.93deg,
+      rgba(255, 165, 178, 0.13),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(21.11px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.26rem;
+    gap: 0.13rem;
+  }
+  .frame-child1CareerMobileTwoLineOne {
+    position: relative;
+    border-radius: 26.38px 26.38px 26.38px 0;
+    background-color: var(--color-gray-500);
+    backdrop-filter: blur(16.36px);
+    width: 3.14rem;
+    height: 3.16rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 0;
+  }
+  .design-maveric-wrapperCareerMobileTwoLineOne {
+    margin: 0 !important;
+    position: absolute;
+    top: -0.44rem;
+    left: 3.88rem;
+    border-radius: 322.93px;
+    background: linear-gradient(93.15deg, #674c2c, #f69a2b 45.83%, #664c2c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.61rem;
+    z-index: 1;
+  }
+  .sr-designerCareerMobileTwoLineOne {
+    position: relative;
+    font-size: 0.76rem;
+  }
+  .frame-parent2CareerMobileTwoLineOne,
+  .himanshu-jaina-parentCareerMobileTwoLineOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .himanshu-jaina-parentCareerMobileTwoLineOne {
+    justify-content: flex-start;
+    z-index: 2;
+  }
+  .frame-parent2CareerMobileTwoLineOne {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 62.3px);
+    justify-content: center;
+    gap: 0.61rem;
+    text-align: center;
+    font-size: 0.91rem;
+  }
+  .ellipse-parentCareerMobileTwoLineOne {
+    position: absolute;
+    height: 56.26%;
+    width: 40.26%;
+    top: 38.22%;
+    right: 29.24%;
+    bottom: 5.52%;
+    left: 30.5%;
+  }
+  .at-pune-andCareerMobileTwoLineOne {
+    color: var(--color-gray-600);
+  }
+  .hugeCareerMobileTwoLineOne {
+    color: var(--color-gray-700);
+  }
+  .for-this-wonderfulCareerMobileTwoLineOne {
+    color: var(--color-gray-800);
+  }
+  .perfectly-organized-event-containerCareerMobileTwoLineOne {
+    position: relative;
+    display: inline-block;
+    width: 1.63rem;
+    flex-shrink: 0;
+  }
+  .perfectly-organized-event-at-p-wrapperCareerMobileTwoLineOne {
+    position: absolute;
+    height: 2.44%;
+    width: 7.78%;
+    top: 41.29%;
+    right: 60.63%;
+    bottom: 56.27%;
+    left: 31.6%;
+    border-radius: 2.88px;
+    background-color: var(--color-gray-500);
+    backdrop-filter: blur(3.88px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.14rem;
+    box-sizing: border-box;
+    opacity: 0;
+  }
+  .frame-parent1CareerMobileTwoLineOne,
+  .frame-wrapper1CareerMobileTwoLineOne,
+  .group-divCareerMobileTwoLineOne {
+    position: absolute;
+    width: 23.79rem;
+    height: 22.33rem;
+  }
+  .frame-wrapper1CareerMobileTwoLineOne {
+    top: 0;
+    left: calc(50% - 190.35px);
+  }
+  .frame-parent1CareerMobileTwoLineOne,
+  .group-div {
+    top: 29.85rem;
+    left: calc(50% - 195.8px);
+    font-size: 0.09rem;
+  }
+  .frame-parent1CareerMobileTwoLineOne {
+    top: 5.81rem;
+    left: calc(50% - 663px);
+    width: 80.94rem;
+    height: 58.88rem;
+    overflow: hidden;
+    font-size: 0.76rem;
+  }
+  .perfectly-organized-event-container1CareerMobileTwoLineOne {
+    align-self: stretch;
+    position: relative;
+    z-index: 0;
+  }
+  .iconCareerMobileTwoLineOne {
+    position: absolute;
+    margin: 0 !important;
+    top: -0.94rem;
+    left: 2.31rem;
+    width: 3.44rem;
+    height: 2.63rem;
+    opacity: 0.08;
+    z-index: 1;
+  }
+  .perfectly-organized-event-at-p-parentCareerMobileTwoLineOne {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .design-leadCareerMobileTwoLineOne,
+  .spanCareerMobileTwoLineOne {
+    font-size: var(--mob-body1-size);
+  }
+  .design-leadCareerMobileTwoLineOne {
+    position: relative;
+  }
+  .abhishek-vyas-parentCareerMobileTwoLineOne {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: var(--mob-h2-size);
+  }
+  .be-our-missing-piece-complete-parentCareerMobileTwoLineOne,
+  .frame-parent3CareerMobileTwoLineOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .frame-parent3CareerMobileTwoLineOne {
+    align-self: stretch;
+    gap: var(--gap-base);
+    font-size: var(--mob-body1-size);
+  }
+  .be-our-missing-piece-complete-parentCareerMobileTwoLineOne {
+    position: absolute;
+    top: 11rem;
+    left: calc(50% - 195px);
+    width: 24.38rem;
+    padding: 0 var(--padding-5xl);
+    box-sizing: border-box;
+    gap: var(--gap-29xl);
+    text-align: center;
+  }
+
+
+
+  .parentCareerMobileTwoLineOne {
+    background: linear-gradient(180.04deg, #34a079, #080810);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: var(--padding-base);
+    gap: var(--gap-base);
+    transform: rotate(-180deg);
+    font-size: 4.5rem;
+  }
+
+
+  .our-teamsCareerMobileTwoLineOne {
+    position: relative;
+    /* background-color: var(--color-gray-100); */
+    width: 100%;
+    height: 53.38rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--mob-h1-size);
+    color: var(--color-white);
+    font-family: var(--mob-h2);
+  }
+  
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --mob-h2: Inter;
+    --font-sf-pro-display: "SF Pro Display";
+  
+    /* font sizes */
+    --font-size-45xl: 4rem;
+    --mob-h2-size: 1.5rem;
+    --mob-body1-size: 1rem;
+    --mob-h1-size: 2rem;
+    --font-size-smi-2: 0.76rem;
+    --font-size-mini-6: 0.91rem;
+    --font-size-sm: 0.88rem;
+    --font-size-mid: 1.06rem;
+  
+    /* Colors */
+    --color-gray-100: #080810;
+    --color-gray-200: rgba(255, 255, 255, 0.9);
+    --color-gray-300: rgba(255, 255, 255, 0.29);
+    --color-gray-400: rgba(255, 255, 255, 0.46);
+    --color-gray-500: rgba(255, 255, 255, 0.19);
+    --color-gray-600: rgba(255, 255, 255, 0.43);
+    --color-gray-700: rgba(255, 255, 255, 0.4);
+    --color-gray-800: rgba(255, 255, 255, 0.3);
+    --color-white: #fff;
+  
+    /* Gaps */
+    --gap-29xl: 3rem;
+    --gap-base: 1rem;
+    --gap-13xl: 2rem;
+    --gap-5xs: 0.5rem;
+  
+    /* Paddings */
+    --padding-5xl: 1.5rem;
+    --padding-base: 1rem;
+    --padding-8xs-9: 0.31rem;
+    --padding-12xs-5: 0.03rem;
+    --padding-13xl: 2rem;
+  
+    /* Border radiuses */
+    --br-5xl: 24px;
+    --br-1580xl-4: 1599.4px;
+    --br-7xl-4: 26.4px;
+    --br-8xs-2: 4.2px;
+    --br-4xl-2: 23.2px;
+    --br-11xl-6: 30.6px;
+    --br-13xl: 32px;
+  }
+ 
+  
+
+
+  /* Third Component Mobile  */
+  .bCareerMobileThreeLinetwo,
+.get-a-lookCareerMobileThreeLinetwo {
+  position: relative;
+}
+.get-a-lookCareerMobileThreeLinetwo {
+  align-self: stretch;
+}
+.bCareerMobileThreeLinetwo {
+  transform: rotate(180deg);
+  /* transform-origin: 0 0; */
+  z-index: 0;
+}
+.frame-childCareerMobileThreeLinetwo,
+.frame-itemCareerMobileThreeLinetwo {
+  position: absolute;
+  margin: 0 !important;
+  backdrop-filter: blur(100.62px);
+  overflow: hidden;
+  flex-shrink: 0;
+  transform-origin: 1 5;
+}
+.frame-childCareerMobileThreeLinetwo {
+  top: 2.14rem;
+  left: 11.63rem;
+  background: linear-gradient(
+    221.27deg,
+    rgba(174, 227, 88, 0.13),
+    rgba(105, 142, 45, 0)
+  );
+  width: 11.43rem;
+  height: 11.35rem;
+  transform: rotate(125.58deg);
+  z-index: 1;
+}
+.frame-itemCareerMobileThreeLinetwo {
+  top: 2.12rem;
+  left: 9.69rem;
+  border-radius: 1599.44px 1599.44px 1599.44px 0;
+  background: linear-gradient(221.27deg, rgba(227, 155, 88, 0.12), transparent);
+  width: 16.51rem;
+  height: 16.51rem;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+.begin-your-journeyCareerMobileThreeLinetwo {
+  font-size: var(--mob-body1-size);
+  transform: rotate(180deg);
+  /* transform-origin: 0 0; */
+  z-index: 3;
+}
+.begin-your-journeyCareerMobileThreeLinetwo,
+.discover-your-stageCareerMobileThreeLinetwo,
+.parentCareerMobileThreeLinetwo {
+  align-self: stretch;
+  position: relative;
+}
+.discover-your-stageCareerMobileThreeLinetwo {
+  font-size: var(--mob-h2-size);
+  transform: rotate(180deg);
+  transform-origin: 1 5;
+  z-index: 4;
+}
+.parentCareerMobileThreeLinetwo {
+  background: linear-gradient(
+    180.04deg,
+    rgba(52, 160, 121, 0.4),
+    rgba(8, 8, 16, 0.4)
+  );
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-base);
+  gap: 1rem;
+  transform: rotate(-180deg);
+  font-size: 4.5rem;
+}
+.b1CareerMobileThreeLinetwo,
+.frame-innerCareerMobileThreeLinetwo,
+.parentCareerMobileThreeLinetwo {
+  transform-origin: 3 5;
+}
+.frame-innerCareerMobileThreeLinetwo {
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 19.43rem;
+  border-radius: 1599.44px 1599.44px 1599.44px 0;
+  background: linear-gradient(
+    221.27deg,
+    rgba(227, 155, 88, 0.3),
+    rgba(0, 0, 0, 0.01)
+  );
+  backdrop-filter: blur(100.62px);
+  width: 21.24rem;
+  height: 21.24rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  transform: rotate(65.69deg);
+  z-index: 0;
+}
+.b1CareerMobileThreeLinetwo {
+  position: relative;
+  transform: rotate(180deg);
+  z-index: 1;
+}
+.frame-divCareerMobileThreeLinetwo,
+.frame-groupCareerMobileThreeLinetwo {
+  overflow: hidden;
+  /* transform-origin: 0 0; */
+}
+.frame-groupCareerMobileThreeLinetwo {
+  align-self: stretch;
+  background: linear-gradient(
+    180.04deg,
+    rgba(160, 130, 52, 0.9),
+    rgba(8, 8, 16, 0.9)
+  );
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-base);
+  position: relative;
+  gap: 5rem;
+  transform: rotate(-180deg);
+  opacity: 0.3;
+}
+.frame-divCareerMobileThreeLinetwo {
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 19.43rem;
+  background: linear-gradient(
+    221.27deg,
+    rgba(227, 88, 147, 0.3),
+    rgba(0, 0, 0, 0.01)
+  );
+  backdrop-filter: blur(100.62px);
+  width: 21.24rem;
+  height: 21.24rem;
+  flex-shrink: 0;
+  transform: rotate(65.69deg);
+  z-index: 0;
+}
+.frame-containerCareerMobileThreeLinetwo {
+  align-self: stretch;
+  background: linear-gradient(180.04deg, #ec8ad6, #080810);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: var(--padding-base);
+  position: relative;
+  gap: 5.13rem;
+  transform: rotate(-180deg);
+  opacity: 0.3;
+}
+.frame-child1CareerMobileThreeLinetwo,
+.frame-containerCareerMobileThreeLinetwo,
+.groupCareerMobileThreeLinetwo {
+  overflow: hidden;
+  /* transform-origin: 0 0; */
+}
+.frame-child1CareerMobileThreeLinetwo {
+  position: absolute;
+  margin: 0 !important;
+  top: 8.19rem;
+  left: 3.67rem;
+  border-radius: 0 400px 0 800px;
+  background: linear-gradient(
+    221.27deg,
+    rgba(91, 227, 88, 0.3),
+    rgba(0, 0, 0, 0.01)
+  );
+  backdrop-filter: blur(100.62px);
+  width: 18.31rem;
+  height: 22.24rem;
+  flex-shrink: 0;
+  transform: rotate(9.06deg);
+  opacity: 0.37;
+  z-index: 1;
+}
+.groupCareerMobileThreeLinetwo {
+  align-self: stretch;
+  background: linear-gradient(180.04deg, #8aceec, #080810);
+  align-items: flex-end;
+  padding: var(--padding-base);
+  position: relative;
+  gap: 3.38rem;
+  transform: rotate(-180deg);
+  opacity: 0.3;
+}
+.frame-parentCareerMobileThreeLinetwo,
+.get-a-look-at-our-application-parentCareerMobileThreeLinetwo,
+.groupCareerMobileThreeLinetwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frame-parentCareerMobileThreeLinetwo {
+  align-self: stretch;
+  align-items: flex-start;
+  font-size: var(--font-size-45xl);
+  /* border: 2px solid green; */
+
+}
+.get-a-look-at-our-application-parentCareerMobileThreeLinetwo {
+  position: relative;
+  border-radius: var(--br-5xl) var(--br-5xl) 0 0;
+  background-color: #080810;
+  width: 100%;
+  align-items: flex-end;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  gap: 3rem;
+  text-align: left;
+  font-size: var(--mob-h1-size);
+  color: var(--color-white);
+  font-family: var(--mob-h2);
+  /* border: 2px solid red; */
+}
+
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --mob-h2: Inter;
+
+  /* font sizes */
+  --font-size-45xl: 4rem;
+  --mob-h2-size: 1.5rem;
+  --mob-body1-size: 1rem;
+  --mob-h1-size: 2rem;
+
+  /* Colors */
+  --color-white: #fff;
+
+  /* Paddings */
+  --padding-base: 1rem;
+
+  /* Border radiuses */
+  --br-5xl: 24px;
+  --br-1580xl-4: 1599.4px;
+}

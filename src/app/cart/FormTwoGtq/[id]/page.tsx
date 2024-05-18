@@ -3,8 +3,10 @@
 "use client"
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import { Box, styled } from "@mui/material";
-import { useRouter } from 'next/router';
 import './pageFormOne.css'
+import NavbarOne from "@/app/MainNavbar/NavbarOne";
+import Footer from "@/app/Page/Footer";
+import apiUrlClinet from "../../../../../urlconfig";
 
 
 const MainBox = styled(Box)`
@@ -44,25 +46,27 @@ const Dropdown = ({ optionsone, selectedOptionOne, onOptionChangeOne }) => {
   );
 };
 
-const ProfileFormOne = () => {
+const page = () => {
 
   // const router = useRouter();
 
   useEffect(() => {
-    // Access the pathname from the window location
     const pathname = window.location.pathname;
-
-    // Split the pathname to extract the parameter (assuming it's the last segment)
     const segments = pathname.split('/');
     const id = segments[segments.length - 1];
-
-    // Output the id to the console (or handle it as needed)
     if (id) {
       console.log('ID:', id);
     }
   }, []);
 
 
+  useEffect(() => {
+    const artistProfilePic = localStorage.getItem('clearKey') || "DefaultPic";
+    console.log("artist-profile-pic", artistProfilePic);
+  }, []);
+
+
+  // const categoryBannerImage = localStorage.getItem('categoryBannerImage');
 
 
   const optionsone = [
@@ -73,7 +77,7 @@ const ProfileFormOne = () => {
     "Private Party",
     "Concert/Festival",
     "Wedding",
-    "Resturent",
+    "Restaurant",
     "Professional Hiring",
     "Inauguration",
     "Photo/Video Shoot",
@@ -83,10 +87,10 @@ const ProfileFormOne = () => {
     "Kids Party",
     "Exhibition",
   ];
-  const [selectedOptionOne, setSelectedOptionOne] = useState(optionsone[0]);
-  const handleOptionChangeOne = (newOptionOne) => {
-    setSelectedOptionOne(newOptionOne);
-  };
+  // const [selectedOptionOne, setSelectedOptionOne] = useState(optionsone[0]);
+  // const handleOptionChangeOne = (newOptionOne) => {
+  //   setSelectedOptionOne(newOptionOne);
+  // };
 
   const [isMobileView, setIsMobileView] = useState(false);
   useEffect(() => {
@@ -101,7 +105,7 @@ const ProfileFormOne = () => {
   }, []);
 
   // date function
- 
+
 
   const maxYear = 2025;
 
@@ -170,16 +174,24 @@ const ProfileFormOne = () => {
     window.location.href = `/cart/FormGtq?artistId=${artistId}&billing_event_type=${billing_event_type}&billing_event_date=${billing_event_date}&billing_event_budget=${billing_event_budget}&billing_event_gathering_size=${billing_event_gathering_size}&billing_event_venue=${billing_event_venue}`;
   };
 
+
+  const [ArtistProfilePic, setArtistProfilePic] = useState({});
+  const [artistIdNow, setArtistIdNow] = useState({})
+
   // data pass
   const artistName = ""
   const artistProfilePic = ""
   const categoryName = ""
-  
+
   const urlSegments = window.location.pathname.split("/");
   const name_id = urlSegments[urlSegments.length - 1];
-  const artistId = decodeURIComponent(name_id);
-  // city code
-  console.log("decoded_event_name=",artistId)
+  // const artistId = decodeURIComponent(name_id);
+  // console.log("decoded_event_name=", artistId)
+  const artist_name = decodeURIComponent(name_id);
+  const artistId = decodeURIComponent(artistIdNow);
+  console.log("decoded_artist_name=", artist_name)
+
+
 
   const [suggestions, setSuggestions] = useState([]);
   const suggestionsRef = useRef(null);
@@ -236,9 +248,35 @@ const ProfileFormOne = () => {
     // Make sure to handle cases where the URL doesn't have the expected structure
 
   }, []);
-  
+
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${apiUrlClinet}/${artist_name}`);
+        const data = await response.json();
+        // const eventId = data.events_data.id;
+        setArtistProfilePic(data.artist.profile_pic);
+        setArtistIdNow(data.artist.id)
+        localStorage.setItem("profile_pic", data.artist.profile_pic);
+
+        // console.log("data=",data);
+        console.log("finally");
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        // setLoadingPyrTwo(false);
+        console.log("finally")
+      }
+    };
+    fetchData();
+  }, [artist_name]);
+
+
   return (
     <Fragment>
+      <NavbarOne />
       <MainBox>
         {isMobileView ? (
           <>
@@ -262,7 +300,7 @@ const ProfileFormOne = () => {
                   <Box className="component-29GTQMobileOne">
                     <Box className="zakir-khan-1-wrapperGTQMobileOne">
                       <img
-                        src={artistProfilePic}
+                        src={ArtistProfilePic}
                         className="zakir-khan-1GTQMobileOne"
                       ></img>
                     </Box>
@@ -483,7 +521,7 @@ const ProfileFormOne = () => {
                     <img
                       className="zakir-khan-1FromOne"
                       alt=""
-                      src={artistProfilePic}
+                      src={ArtistProfilePic}
                     />
                   </Box>
                 </Box>
@@ -657,8 +695,8 @@ const ProfileFormOne = () => {
                   </Box>
                 </Box>
 
-                <Box style={{cursor:'pointer'}}>
-                  <Box className="next-stepFromOne" onClick={handleNextStep}>
+                <Box style={{ cursor: 'pointer' }} onClick={handleNextStep}>
+                  <Box className="next-stepFromOne">
                     Next Step &gt;&gt;
                   </Box>
                 </Box>
@@ -667,8 +705,9 @@ const ProfileFormOne = () => {
           </>
         )}
       </MainBox>
+      <Footer />
     </Fragment>
   );
 };
 
-export default ProfileFormOne;
+export default page;

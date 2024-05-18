@@ -29,7 +29,7 @@ const MainBox = styled(Box)`
 
 const CommittedBox = styled(Box)`
   display: flex;
-  width: 76%;
+  width: 83%;
   height: 100%;
   padding: 80px;
   // align-items: flex-start;
@@ -47,7 +47,7 @@ const CommittedBox = styled(Box)`
   box-shadow: 0px 0px 63px 0px rgba(0, 0, 0, 0.9) inset;
   @media (min-width: 991px) and (max-width: 1550px) {
     width: 76%;
-    height: 520px;
+    height: 620px;
   }
   @media (max-width: 768px) {
     display: none;
@@ -86,12 +86,12 @@ const CommitBox = styled(Box)`
 const CommitText = styled(Typography)`
   color: #fff;
   font-family: Inter;
-  font-size: 48px;
+  font-size: 2.52vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   @media (min-width: 991px) and (max-width: 1550px) {
-    font-size: 38px;
+    font-size: 1.995vw;
   }
   @media (max-width: 768px) {
     color: rgba(255, 255, 255, 0.95);
@@ -117,7 +117,8 @@ const DateText = styled(Typography)`
   line-height: normal;
   margin-top: -25px;
   @media (min-width: 991px) and (max-width: 1550px) {
-    font-size: 120px;
+    font-size: 6.299vw;
+    margin-top: 10px;
   }
   @media (max-width: 768px) {
     color: rgba(255, 255, 255, 0.95);
@@ -197,15 +198,16 @@ const CategoryText = styled(Typography)`
   color: #9aeb8c;
   text-align: center;
   font-family: Inter;
-  font-size: 80px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   backdrop-filter: blur(3.5721068382263184px);
-  margin-top: -10px;
+  margin-top: -27px;
   @media (min-width: 991px) and (max-width: 1550px) {
-    font-size: 60px;
-    margin-top: -25px;
+    font-size: 3.15vw;
+    margin-top: -50px;
+    margin-left: -37px;
   }
   @media (max-width: 768px) {
     color: #ef7e2b;
@@ -230,20 +232,25 @@ const CategorySecText = styled(Typography)`
   color: #9aeb8c;
   text-align: center;
   font-family: Inter;
-  font-size: 32px;
+ 
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  font-size: 1.312vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: -43px;
   @media (max-width: 768px) {
     color: #ef7e2b;
     text-align: center;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-top: -8px;
-    margin-left: 10px;
+  
   }
   @media (min-width: 768px) and (max-width: 991px) {
     width: 100%;
@@ -261,10 +268,11 @@ const CitiesBox = styled(Box)`
   border-radius: 40px;
   border: 1px solid #bb615b;
   @media (min-width: 991px) and (max-width: 1550px) {
-    margin-top: 14px;
-    margin-left: 0px;
-    width: 360px;
-    height: 136px;
+    margin-top: 59px;
+    margin-left: -18px;
+    width: 18.898vw;
+    height: 11.935vh;
+    overflow: hidden;
   }
   @media (max-width: 768px) {
     width: 345.00003px;
@@ -308,7 +316,7 @@ const CitiesText = styled(Typography)`
   line-height: normal;
   backdrop-filter: blur(3.5721068382263184px);
   @media (min-width: 991px) and (max-width: 1550px) {
-    font-size: 60px;
+    font-size: 3.15vw;
     padding-top: 39px;
   }
   @media (max-width: 768px) {
@@ -337,7 +345,7 @@ const CitiesSecText = styled(Typography)`
   color: #bb615b;
   text-align: center;
   font-family: Inter;
-  font-size: 32px;
+  font-size: 1.68vw;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -374,7 +382,7 @@ const TotalBox = styled(Box)`
   );
   @media (min-width: 991px) and (max-width: 1550px) {
     margin-top: -1px;
-    margin-left: 0px;
+    margin-left: 2px;
     width: 360px;
     height: 136px;
   }
@@ -416,7 +424,7 @@ const TotalText = styled(Typography)`
   @media (min-width: 991px) and (max-width: 1550px) {
     padding: 0px;
     padding-top: 9px;
-    font-size: 60px;
+    font-size: 3.15vw;
   }
   @media (max-width: 768px) {
     color: #f86e42;
@@ -483,7 +491,7 @@ const WorkingBox = styled(Box)`
   backdrop-filter: blur(17px);
   @media (min-width: 991px) and (max-width: 1550px) {
     margin-top: 2px;
-    margin-left: 0px;
+    margin-left: -5px;
     width: 360px;
     height: 205px;
   }
@@ -530,7 +538,7 @@ const WorkingText = styled(Typography)`
   line-height: normal;
   backdrop-filter: blur(1.0386786460876465px);
   @media (min-width: 991px) and (max-width: 1550px) {
-    font-size: 50px;
+    font-size: 3.15vw;
     text-align: center;
     margin-top: -18px;
   }
@@ -626,7 +634,7 @@ const ColorBox = styled(Box)`
   border: 0px solid red;
   @media (min-width: 991px) and (max-width: 1550px) {
     // margin-top: 20px;
-    margin-left: 0px;
+    margin-left: 6px;
     width: 121.876px;
     height: 175.393px;
   }
@@ -707,7 +715,7 @@ const StageMinText = styled(Typography)`
   @media (min-width: 991px) and (max-width: 1550px) {
     margin-left: 42px;
     margin-top: 42px;
-    font-size: 60px;
+    font-size: 3.15vw;
   }
   @media (max-width: 768px) {
     color: #e3a2d8;
@@ -827,7 +835,7 @@ const SixPage = () => {
                 <Box className="frame-wrapper2Since">
                   {/* <Fade bottom> */}
                     <Box className="k-parentSince">
-                      <Box className="kSince">150+</Box>
+                      <Box className="kSince">10+</Box>
                       <Box className="performancesSince">Categories</Box>
                     </Box>
                   {/* </Fade> */}
@@ -859,7 +867,7 @@ const SixPage = () => {
             <ExcellBox>
               <Category>
                 {/* <Fade bottom> */}
-                  <CategoryText>150+</CategoryText>
+                  <CategoryText>10+</CategoryText>
                   <CategorySecText>Categories</CategorySecText>
                 {/* </Fade> */}
               </Category>
@@ -881,7 +889,7 @@ const SixPage = () => {
               <ColorBox>
                 <WorkingBox>
                   {/* <Fade bottom> */}
-                    <WorkingText>₹24Cr +</WorkingText>
+                    <WorkingText>₹25Cr +</WorkingText>
                     <WorkingSecText>
                       Worth of booking
                       <ImageArrow src="Image/arroelogo.svg" alt="arrowlogo" />

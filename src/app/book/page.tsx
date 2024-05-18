@@ -5,6 +5,9 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Box, styled } from "@mui/material";
 import "./pyrOne.css"
 import Link from "next/link";
+import NavbarOne from "../MainNavbar/NavbarOne";
+import Footer from "../Page/Footer";
+import apiUrlClinet from '../../../urlconfig'
 
 
 // import { Link } from "react-router-dom";
@@ -46,8 +49,8 @@ const PyrOne = (EventCategoriesId) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://stagi.starclinch.com/book`);
-        const data = await response.json();
+        let response = await fetch(`${apiUrlClinet}/book`);
+        let data = await response.json();
         const firstCategory = data.variety_subcats[0]; // Assuming you want the first element
         if (firstCategory) {
           setEventCategories(data.variety_subcats);
@@ -66,6 +69,7 @@ const PyrOne = (EventCategoriesId) => {
 
   return (
     <Fragment>
+      <NavbarOne/>
       <MainBox>
         {isMobileView ? (
           <>
@@ -152,7 +156,7 @@ const PyrOne = (EventCategoriesId) => {
                 {EventCategories.map((categoryEvent) => (
                   <Link
                     style={{ color: "white", textDecoration: "none" }}
-                    href={`/pyr-categories-two/${categoryEvent.id}`}
+                    href={`/book/event/${categoryEvent.id}`}
                     key={categoryEvent.id}
                   >
                     <div class="improvised-all-categoriesCateLineMobileVersion">
@@ -183,9 +187,9 @@ const PyrOne = (EventCategoriesId) => {
             <Box className="frame-parentCateTwo">
               <Box className="frame-wrapperCateTwo">
                 <Box className="frame-groupCateTwo">
-                  <Box className="all-categories-parentCateTwo">
-                    <Box className="all-categoriesCateTwo">All Categories</Box>
-                  </Box>
+                 
+                    <Box className="all-categoriesCateTwo" style={{textAlign:'center'}}>All Choose Categories</Box>
+                 
                   <Box className="frame-parent2CateTwo">
                     {loadingPyr ? (
                        <Box className="lds-spinner">
@@ -224,7 +228,7 @@ const PyrOne = (EventCategoriesId) => {
                                         }
                                         alt={categoryEvent.name}
                                       />
-                                      <p>{categoryEvent.name}</p>
+                                      <p style={{paddingTop:'15px'}}>{categoryEvent.name}</p>
                                     </Box>
                                   </div>
                                 </Box>
@@ -241,6 +245,7 @@ const PyrOne = (EventCategoriesId) => {
           </>
         )}
       </MainBox>
+      <Footer/>
     </Fragment>
   );
 };

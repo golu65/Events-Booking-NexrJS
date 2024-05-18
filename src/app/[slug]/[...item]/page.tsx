@@ -7,10 +7,17 @@ import '../pageSlugProfileOne.css'
 import NavbarOne from "@/app/MainNavbar/NavbarOne";
 import CloseIcon from '@mui/icons-material/Close';
 import Footer from "@/app/Page/Footer";
+import FilterOne from "../FilterOne";
+import WatchLaterIcon from '@mui/icons-material/WatchLater';
+import AddLocationIcon from '@mui/icons-material/AddLocation';
+import LanguageIcon from '@mui/icons-material/Language';
+import EastIcon from '@mui/icons-material/East';
+
 
 
 
 interface ArtistData {
+    categoryId,
     artist: {
         id: number;
         professional_name: string;
@@ -207,6 +214,7 @@ interface Page {
     }[];
     next_page: number;
     has_next: boolean;
+    total_artist_count: number;
 }
 
 
@@ -313,16 +321,30 @@ interface MyData {
 }
 
 
+const apiUrl = process.env.API_URL;
+// console.log("Item", apiUrl);
 
 const timestamp: number = new Date().getTime();
-async function artist(slug: string, item: string) {
+
+export type ArtistFunction = (
+    slug: string,
+    item: string,
+    context?: NextPageContext
+) => Promise<ArtistData | null>;
+
+
+
+
+async function artist(slug: string, item: string, next: string) {
     try {
-        console.log("slug=",slug)
+        console.log("slug=", next)
+        console.log("slug444=", slug)
+        console.log("item=", item)
         // let data = await fetch(`https://stagi.starclinch.com/${slug}/${item}`);
         // data = await data.json();
         // console.log('API Response:', data);
         // return data;
-        let endpoint = `https://stagi.starclinch.com/${slug}`;
+        let endpoint = `${apiUrl}/${slug}`;
 
         if (Array.isArray(item)) {
             if (item.length > 0) {
@@ -332,11 +354,25 @@ async function artist(slug: string, item: string) {
             endpoint += `/${item}`;
         }
 
-        let data = await fetch(`${endpoint}?timestamp=${timestamp}`);
-        data = await data.json();
-        console.log('API Response:', data);
-        console.log('pageeeeee:', data.artists_pages);
-        return data;
+        // let data = await fetch(`${endpoint}?timestamp=${timestamp}`);
+        // data = await data.json();
+        // console.log('API Response:', data.next_page);
+        // // console.log('pageeeeee:', data.artists_pages);
+        // return data;
+        if (next !== undefined) {
+            // If next is defined, hit a different API
+            // let differentEndpoint = `${differentApiUrl}/${slug}/${next}`;
+            let data = await fetch(`${endpoint}?page=${next}&timestamp=${timestamp}`);
+            data = await data.json();
+            console.log('API Response (different):', data.next_page);
+            return data;
+        } else {
+            // If next is not defined, use the default API
+            let data = await fetch(`${endpoint}?timestamp=${timestamp}`);
+            data = await data.json();
+            console.log('API Response (default):', data.next_page);
+            return data;
+        }
     } catch (error) {
         console.error('Error fetching data:', error);
         return null;
@@ -344,12 +380,14 @@ async function artist(slug: string, item: string) {
 }
 
 
-export async function generateMetadata({ params }: { slug: string }): Promise<Metadata> {
-    const artistData = await artist(params?.slug);
+export async function generateMetadata({ params, searchParams }: { params: { slug: string; item: string } }): Promise<Metadata> {
+    const { slug, item } = params || {};
+    const next = searchParams.page
+    const artistData = await artist(slug, item, next);
 
     if (artistData) {
-        const title = artistData.meta?.title || 'Default Title';
-        const description = artistData.meta?.description || 'Default Description';
+        const title = artistData.meta?.title;
+        const description = artistData.meta?.description;
         const url = artistData.meta?.url || '';
         const siteName = artistData.meta?.site_name || '';
 
@@ -369,19 +407,16 @@ export async function generateMetadata({ params }: { slug: string }): Promise<Me
                 description: description,
             },
         };
-    } else {
-        return {
-            title: 'Default Title',
-            description: 'Default Description',
-        };
     }
 }
 
 
-export default async function Page({ params }: { slug: string; item: string }) {
+export default async function Page({ params, searchParams }: { params: { slug: string; item: string } }) {
     const { slug, item } = params || {};
-    const artistData: Page | null = await artist(slug, item);
-    console.log("item", item)
+    const next = searchParams.page
+    console.log("nextone", next)
+    const artistData: Page | null = await artist(slug, item, next);
+    // console.log("item", item)
     // const [selectedCity, setSelectedCity] = useState("");
     // const [selectedCity, setSelectedCity] = useState("");
     // const handleCityChange = (city) => {
@@ -397,6 +432,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
         );
     }
 
+    const isNextPageAvailable = artistData && artistData.next_page;
 
 
     return (
@@ -405,17 +441,26 @@ export default async function Page({ params }: { slug: string; item: string }) {
             <div className="MainBoxProfileOne">
 
                 <>
+                    <Box className="frame-parentProOne">
 
+                        <Box className="comedians-parentProOne">
+                            <h1 className="comediansProOne">{artistData.h1_heading}</h1>
+                            <Box className="choose-from-theProOne">
+                                Choose from the vast and versatile sea of {artistData.total_artist_count}+ options
+                            </Box>
+                        </Box>
+
+                    </Box>
                     <div className="various-artistsone-categoryFilterOneDesktop">
                         <div className="frame-groupFilterOneDesktop">
                             <div className="frame-containerFilterOneDesktop">
                                 <div className="frame-divFilterOneDesktop">
-                                    <input
+                                    {/* <input
                                         type="search"
                                         style={{ outline: "none" }}
                                         className="frame-wrapperFilterOneDesktop"
                                         placeholder="Search for Artist"
-                                    />
+                                    /> */}
                                     <Box
                                         style={{ display: "flex", }}
                                         className="frame-wrapperFilterOneDesktopFilterText"
@@ -431,9 +476,9 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     // onClick={handleCityRemove}
                                                     >
                                                         {artistData.filter_title.l}
-                                                        <CloseIcon  style={{ color: "red", marginTop:'-8px', fontSize:'34px', fontWeight:'bold' }}/>
-                                                      
-                                                        
+                                                        <CloseIcon className="IconSeeFilter" />
+
+
                                                     </Link>
                                                 </div>
                                             )}
@@ -444,14 +489,14 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                         <>
                                             {artistData.filter_title.g && (
                                                 <div style={{ marginLeft: "10px" }}>
-                                                    
+
                                                     <Link
                                                         href={`/${artistData.selected_cat}${artistData.selected_subacat || ""
                                                             }/${artistData.possible.g[2]}`}
                                                     // onClick={handleCityRemove}
                                                     >
                                                         {artistData.filter_title.g}
-                                                        <CloseIcon  style={{ color: "red", marginTop:'-8px', fontSize:'34px', fontWeight:'bold' }}/>
+                                                        <CloseIcon className="IconSeeFilter" />
                                                         <Box />
                                                     </Link>
                                                 </div>
@@ -463,13 +508,13 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                         <>
                                             {artistData.filter_title.sub_cat && (
                                                 <div style={{ marginLeft: "10px" }}>
-                                                    
+
                                                     <Link
                                                         href={`/${artistData.selected_cat}${artistData.path}`}
                                                     // onClick={handleGenreRemove}
                                                     >
                                                         {artistData.filter_title.sub_cat}
-                                                        <CloseIcon  style={{ color: "red", marginTop:'-8px', fontSize:'34px', fontWeight:'bold' }}/>
+                                                        <CloseIcon className="IconSeeFilter" />
                                                         <Box />
                                                     </Link>
                                                 </div>
@@ -481,7 +526,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                         <>
                                             {artistData.filter_title.lang && (
                                                 <div style={{ marginLeft: "10px" }}>
-                                                    
+
                                                     <Link
                                                         href={`/${artistData.selected_cat}${artistData.selected_subacat || ""
                                                             }/${artistData.possible.lang[2]}`}
@@ -489,7 +534,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     >
                                                         <Box />
                                                         {artistData.filter_title.lang}
-                                                        <CloseIcon  style={{ color: "red", marginTop:'-8px', fontSize:'34px', fontWeight:'bold' }}/>
+                                                        <CloseIcon className="IconSeeFilter" />
                                                     </Link>
                                                 </div>
                                             )}
@@ -508,25 +553,26 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     >
                                                         <Box />
                                                         {artistData.filter_title.e}
-                                                        <CloseIcon  style={{ color: "red", marginTop:'-8px', fontSize:'34px', fontWeight:'bold' }}/>
+                                                        <CloseIcon className="IconSeeFilter" />
                                                     </Link>
                                                 </div>
                                             )}
                                         </>
                                         {/* )} */}
                                     </Box>
-                                    <div className="frame-parent1FilterOneDesktop">
+                                    <FilterOne data={{ slug, item }} />
+                                    {/* <div className="frame-parent1FilterOneDesktop">
                                         <div
                                             className="filter-pillsFilterOneDesktop"
-                                            // onClick={toggleCity}
+                                         
                                             style={{ cursor: "pointer" }}
                                         >
                                             <div className="starclinchFilterOneDesktop">
                                                 City
                                             </div>
-                                            {/* <TuneIcon className="mifilter-iconFilterOneDesktop" /> */}
+                                           
                                         </div>
-                                        {/* {showCity && ( */}
+                                      
                                         <>
                                             <div className="various-artistsone-category-innerFilterOneDesktopCity">
 
@@ -547,15 +593,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                                         type="radio"
                                                                         name="citySelection"
                                                                         className="rectangle-divFilterOneDesktop"
-                                                                    // value={artistCity.city_slug}
-                                                                    // checked={
-                                                                    //     selectedCity ===
-                                                                    //     artistCity.city_slug
-                                                                    // }
-                                                                    // onChange={
-                                                                    //     () => handleCityChange(artistCity)
-
-                                                                    // }
+                                                             
                                                                     />
                                                                 </Link>
                                                             ) : (
@@ -568,15 +606,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                                         type="radio"
                                                                         name="citySelection"
                                                                         className="rectangle-divFilterOneDesktop"
-                                                                    // value={artistCity.city_slug}
-                                                                    // checked={
-                                                                    //     selectedCity ===
-                                                                    //     artistCity.city_slug
-                                                                    // }
-                                                                    // onChange={
-                                                                    //     () => handleCityChange(artistCity)
-
-                                                                    // }
+                                                                   
                                                                     />
                                                                 </Link>
                                                             )}
@@ -588,11 +618,11 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     ))}
                                             </div>
                                         </>
-                                        {/* )} */}
+                                   
 
                                         <div
                                             className="filter-1-parentFilterOneDesktop"
-                                            // onClick={toggleFilterOptionsOne}
+                                
                                             style={{ cursor: "pointer" }}
                                         >
                                             <div className="filter-1FilterOneDesktop">
@@ -646,9 +676,8 @@ export default async function Page({ params }: { slug: string; item: string }) {
 
 
                                         <div
-                                            className="filter-pillsFilterOneDesktop"
-                                            // onClick={toggleGener}
-                                            style={{ cursor: "pointer" }}
+                                            className="filter-pillsFilterOneDesktopGenre"
+
                                         >
                                             <div className="starclinchFilterOneDesktop">
                                                 Genre
@@ -672,15 +701,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                                         className="rectangle-divFilterOneDesktop"
                                                                         type="radio"
                                                                         name="genre"
-                                                                    // const
-                                                                    // gen_slug={genrecat.slug}
-                                                                    // value={genrecat.gen_slug}
-                                                                    // checked={
-                                                                    //     selectedGenre === genrecat.slug
-                                                                    // }
-                                                                    // onChange={() =>
-                                                                    //     handleGenreChange(genrecat.slug)
-                                                                    // }
+                                                                 
                                                                     />
                                                                 </Link>
                                                             ) : (
@@ -691,15 +712,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                                         className="rectangle-divFilterOneDesktop"
                                                                         type="radio"
                                                                         name="genre"
-                                                                    // const
-                                                                    // gen_slug={genrecat.slug}
-                                                                    // value={genrecat.gen_slug}
-                                                                    // checked={
-                                                                    //     selectedGenre === genrecat.slug
-                                                                    // }
-                                                                    // onChange={() =>
-                                                                    //     handleGenreChange(genrecat.slug)
-                                                                    // }
+                                                                
                                                                     />
                                                                 </Link>
                                                             )}
@@ -711,21 +724,20 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     </div>
                                                 ))}
                                         </div>
-                                        {/* )} */}
+                                     
 
                                         <div
-                                            className="filter-pillsFilterOneDesktop"
-                                            // onClick={toggleLanguage}
-                                            style={{ cursor: "pointer" }}
+                                            className="filter-pillsFilterOneDesktopLang"
+
                                         >
                                             <div className="starclinchFilterOneDesktop">
                                                 Language
                                             </div>
 
-                                            {/* <TuneIcon className="mifilter-iconFilterOneDesktop" /> */}
+                                           
                                         </div>
 
-                                        {/* {showLanguage && ( */}
+                                      
                                         <>
                                             <div className="various-artistsone-category-innerFilterOneDesktopLanguas">
                                                 {artistData.languages &&
@@ -733,7 +745,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                         <div
                                                             className="rectangle-parentFilterOneDesktop"
                                                             style={{ padding: "4px" }}
-                                                        // key={index}
+                                                     
                                                         >
                                                             {artistData.selected_slugs ==
                                                                 language.language_name ? (
@@ -745,14 +757,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                                         className="rectangle-divFilterOneDesktop"
                                                                         type="radio"
                                                                         name="language"
-                                                                    // value={language.language_name}
-                                                                    // checked={
-                                                                    //     selectedLanguage ===
-                                                                    //     language.language_name
-                                                                    // }
-                                                                    // onChange={() =>
-                                                                    //     handleLanguageChange(language)
-                                                                    // }
+                                                                   
                                                                     />
                                                                 </Link>
                                                             ) : (
@@ -765,14 +770,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                                         className="rectangle-divFilterOneDesktop"
                                                                         type="radio"
                                                                         name="language"
-                                                                    // value={language.language_name}
-                                                                    // checked={
-                                                                    //     selectedLanguage ===
-                                                                    //     language.language_name
-                                                                    // }
-                                                                    // onChange={() =>
-                                                                    //     handleLanguageChange(language)
-                                                                    // }
+                                                                  
                                                                     />
                                                                 </Link>
                                                             )}
@@ -784,12 +782,10 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     ))}
                                             </div>
                                         </>
-                                        {/* )} */}
+                                     
 
                                         <div
-                                            className="filter-pillsFilterOneDesktop"
-                                            // onClick={toggleEvent}
-                                            style={{ cursor: "pointer" }}
+                                            className="filter-pillsFilterOneDesktopEvent"
                                         >
                                             <div className="starclinchFilterOneDesktop">
                                                 Event
@@ -797,7 +793,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                             <Box className="mifilter-iconFilterOneDesktop" />
                                         </div>
 
-                                        {/* {showEvent && ( */}
+                                     
                                         <div className="various-artistsone-category-innerFilterOneDesktopEvent">
                                             {artistData.events &&
                                                 artistData.events.map((event) => (
@@ -807,39 +803,29 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     >
                                                         {artistData.selected_slugs == event.e_slug ? (
                                                             <Link
-                                                            href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
-                                                                }/${artistData.possible.e[2]}`}
+                                                                href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                                    }/${artistData.possible.e[2]}`}
                                                             >
                                                                 <input
                                                                     type="radio"
                                                                     name="event"
-                                                                    // value={event.e_slug}
+                                                                
                                                                     className="rectangle-divFilterOneDesktop"
-                                                                // checked={
-                                                                //     selectedEvent === event.e_slug
-                                                                // }
-                                                                // onChange={() =>
-                                                                //     handleEventChange(event)
-                                                                // }
+                                                            
                                                                 />
                                                             </Link>
                                                         ) : (
                                                             <Link
-                                                            href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
-                                                                }/${artistData.possible.e[0]}e--${event.e_slug}${artistData.possible.e[1]
-                                                                }`}
+                                                                href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                                    }/${artistData.possible.e[0]}e--${event.e_slug}${artistData.possible.e[1]
+                                                                    }`}
                                                             >
                                                                 <input
                                                                     type="radio"
                                                                     name="event"
-                                                                    // value={event.e_slug}
+                                                                   
                                                                     className="rectangle-divFilterOneDesktop"
-                                                                // checked={
-                                                                //     selectedEvent === event.e_slug
-                                                                // }
-                                                                // onChange={() =>
-                                                                //     handleEventChange(event)
-                                                                // }
+                                                             
                                                                 />
                                                             </Link>
                                                         )}
@@ -850,7 +836,7 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                     </div>
                                                 ))}
                                         </div>
-                                        {/* )}  */}
+                                      
 
                                         <Link
                                             href={`/${artistData.selected_cat}`}
@@ -865,62 +851,257 @@ export default async function Page({ params }: { slug: string; item: string }) {
                                                 </div>
                                             </div>
                                         </Link>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <Box
-                        style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            flexWrap: "wrap",
-                            width: "80%",
-                            margin: "auto",
-                            paddingTop: "68px",
-                        }}
+                    <Box className='ArtistListCss'
+
                     >
                         {artistData.artist_list.map((artist) => (
 
                             <Box className="frame-parentProTwo" key={artist.id}>
-                                <Box className="zakir-khan-parentProTwo">
-                                    <h4 className="zakir-khanProTwo">
-                                        {artist.professional_name}
-                                    </h4>
-                                    <Box className="recently-booked-12-containerProTwo">
-                                        <nbsp>Recently booked </nbsp>
-                                        <nbsp className="marchProTwo">12 March</nbsp>
-                                    </Box>
-                                    <Box className="see-price-book-wrapperProTwo">
-                                        <Link
-                                            href={`/${artist.slug}`}
-                                            style={{
-                                                textDecoration: "none",
-                                                color: "white",
-                                            }}
-                                        >
+                                <Link
+                                    className="LinkClass"
+                                    href={`/${artist.slug}`}
+
+                                >
+                                    <Box className="zakir-khan-parentProTwo">
+                                        <h4 className="zakir-khanProTwo">
+                                            {artist.professional_name && artist.professional_name.slice(0, 10)}
+                                        </h4>
+                                        <Box className="recently-booked-12-containerProTwo">
+                                            <div className="ArtistDec">
+                                                <p className="marchProTwo">{artist.usp && artist.usp.slice(0, 50)}</p>
+                                            </div>
+
+
+
+                                            <div className="deconation">
+                                                <nbsp className="marchProTwo">
+                                                    <WatchLaterIcon />
+                                                    <nbsp style={{ marginLeft: '4px' }}>{artist.performance_duration} Minutes</nbsp><br /></nbsp>
+
+                                                <nbsp className="marchProTwoPTage" ><LanguageIcon /> {artist.languages && artist.languages.slice(0, 14)}</nbsp><br />
+                                                <nbsp className="marchProTwoPTage" ><AddLocationIcon /> {artist.city}</nbsp>
+                                            </div>
+
+                                        </Box>
+                                        <Box className="see-price-book-wrapperProTwo">
+
                                             <Box className="see-priceProTwo">
-                                                See Price & Book --&gt;
+                                                See Price & Book
+                                                <EastIcon style={{ padding: '4px', fontSize: '32px' }} />
                                             </Box>
-                                        </Link>
+
+                                        </Box>
+                                        <img
+                                            className="frame-childProTwo"
+                                            alt={artist.professional_name}
+                                            src={artist.profile_pic}
+                                        />
                                     </Box>
-                                    <img
-                                        className="frame-childProTwo"
-                                        alt=""
-                                        src={artist.profile_pic}
-                                    />
-                                </Box>
+                                </Link>
                             </Box>
                         ))}
                     </Box>
-                    <Link href={`?page=${artistData.next_page}`}>
+
+                    {isNextPageAvailable && (
+                        <Link href={`?page=${artistData.next_page}`}>
                             <Box style={{ color: 'white', textAlign: 'center', marginTop: '80px', fontSize: '32px', cursor: 'pointer' }}>Load More</Box>
-                    </Link>
+                        </Link>
+                    )}
+
+
+
+                    <Box className="group-childProEightTwo">
+                        <Box
+
+                        >
+                            <Box className="textXityLine">
+
+
+                                {artistData.cities &&
+                                    artistData.possible &&
+                                    artistData.cities.map((artistCity) => (
+                                        <div
+                                            className="rectangle-parentFilterOneDesktop"
+                                            style={{ padding: "4px" }}
+                                            key={artist.id}
+                                        >
+                                            {artistData.selected_slugs == artistCity.city_slug ? (
+                                                <Link
+                                                    href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                        }${artistData.possible.l[2]}`}
+                                                >
+                                                    <div className="starclinchFilterOneDesktop">
+                                                        {artistCity.city}
+                                                    </div>
+                                                </Link>
+                                            ) : (
+                                                <Link
+                                                    href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                        }/l--${artistCity.city_slug}${artistData.possible.l[1]
+                                                        }`}
+                                                >
+                                                    <div className="starclinchFilterOneDesktop">
+                                                        {artistCity.city}
+                                                    </div>
+                                                </Link>
+                                            )}
+
+
+                                        </div>
+                                    ))}
+
+
+                            </Box>
+
+                            <Box className="textXityLine">
+
+                                {artistData.genders &&
+                                    artistData.genders.map((genderTwo) => (
+                                        <div
+                                            className="zakir-khan-parentFilterOneDesktop"
+                                            key={genderTwo}
+                                            style={{ padding: "4px" }}
+                                        >
+                                            <div className="rectangle-parentFilterOneDesktop">
+                                                {artistData.selected_slugs == genderTwo.g_slug ? (
+                                                    <Link
+                                                        href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                            }/g--${genderTwo.g_slug}${artistData.possible.g[2]}`}
+                                                    >
+                                                        <div className="starclinchFilterOneDesktop">
+                                                            {genderTwo.gender}
+                                                        </div>
+                                                    </Link>
+                                                ) : (
+                                                    <Link
+                                                        href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                            }/${artistData.possible.g[0]}g--${genderTwo.g_slug}${artistData.possible.g[1]}`}
+                                                    >
+                                                        <div className="starclinchFilterOneDesktop">
+                                                            {genderTwo.gender}
+                                                        </div>
+                                                    </Link>
+                                                )}
+
+
+                                            </div>
+                                        </div>
+                                    ))}
+
+                            </Box>
+
+                            <Box className="textXityLine">
+                                {artistData.sub_categories &&
+                                    artistData.sub_categories.map((genrecat) => (
+                                        <div style={{ padding: "4px" }}>
+                                            <div className="rectangle-parentFilterOneDesktop">
+                                                {typeof artistData.selected_slugs === "string" &&
+                                                    genrecat.slug ===
+                                                    artistData.selected_slugs.split("/")[0] ? (
+                                                    <Link
+                                                        href={`/${artistData.selected_cat}/${genrecat.slug}${artistData.path}`}
+                                                    >
+                                                        <div className="starclinchFilterOneDesktop">
+                                                            {genrecat.name}
+                                                        </div>
+                                                    </Link>
+                                                ) : (
+                                                    <Link
+                                                        href={`/${artistData.selected_cat}/${genrecat.slug}${artistData.path}`}
+                                                    >
+                                                        <div className="starclinchFilterOneDesktop">
+                                                            {genrecat.name}
+                                                        </div>
+                                                    </Link>
+                                                )}
+
+
+                                            </div>
+                                        </div>
+                                    ))}
+                            </Box>
+
+                            <Box className="textXityLine">
+                                {artistData.languages &&
+                                    artistData.languages.map((language, index) => (
+                                        <div
+                                            className="rectangle-parentFilterOneDesktop"
+                                            style={{ padding: "4px" }}
+                                        // key={index}
+                                        >
+                                            {artistData.selected_slugs ==
+                                                language.language_name ? (
+                                                <Link
+                                                    href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                        }/${artistData.possible.lang[2]}`}
+                                                >
+                                                    <div className="starclinchFilterOneDesktop">
+                                                        {language.language_name}
+                                                    </div>
+                                                </Link>
+                                            ) : (
+                                                <Link
+                                                    href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                        }/${artistData.possible.lang[0]}lang--${language.language_name
+                                                        }${artistData.possible.lang[1]}`}
+                                                >
+                                                    <div className="starclinchFilterOneDesktop">
+                                                        {language.language_name}
+                                                    </div>
+                                                </Link>
+                                            )}
+
+
+                                        </div>
+                                    ))}
+                            </Box>
+
+                            <Box className="textXityLine">
+                                {artistData.events &&
+                                    artistData.events.map((event) => (
+                                        <div
+                                            className="rectangle-parentFilterOneDesktop"
+                                            style={{ padding: "4px" }}
+                                        >
+                                            {artistData.selected_slugs == event.e_slug ? (
+                                                <Link
+                                                    href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                        }/${artistData.possible.e[2]}`}
+                                                >
+                                                    <div className="starclinchFilterOneDesktop">
+                                                        {event.event_name}
+                                                    </div>
+                                                </Link>
+                                            ) : (
+                                                <Link
+                                                    href={`/${artistData.selected_cat}${artistData.selected_subcat || ""
+                                                        }/${artistData.possible.e[0]}e--${event.e_slug}${artistData.possible.e[1]
+                                                        }`}
+                                                >
+                                                    <div className="starclinchFilterOneDesktop">
+                                                        {event.event_name}
+                                                    </div>
+                                                </Link>
+                                            )}
+
+
+                                        </div>
+                                    ))}
+                            </Box>
+                        </Box>
+                    </Box>
+
+
                 </>
 
 
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 }

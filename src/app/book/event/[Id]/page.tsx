@@ -5,7 +5,9 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Box, styled } from "@mui/material";
 import "./pyrTwo.css";
 import Link from "next/link";
-import imagesData from './images.json';
+import NavbarOne from "@/app/MainNavbar/NavbarOne";
+import Footer from "@/app/Page/Footer";
+import apiUrlClinet from "../../../../../urlconfig";
 
 
 const MainBox = styled(Box)`
@@ -26,6 +28,40 @@ const MainBox = styled(Box)`
   }
 `;
 
+const namesArray = [
+  "https://i.imgur.com/RgLjKJo.jpg",
+  "https://i.imgur.com/IabugZt.jpg",
+  "https://i.imgur.com/Sq9PTUB.jpg",
+
+  "https://i.imgur.com/NAllxNJ.jpg",
+  "https://i.imgur.com/kOzuBh7.jpg",
+  "https://i.imgur.com/tDjcsAy.jpg",
+
+  "https://i.imgur.com/1pdamjG.jpg",
+
+  "https://i.imgur.com/L6LJB0A.jpg",
+
+
+
+
+  "https://i.imgur.com/5Hu7Sna.jpg",
+
+  "https://i.imgur.com/Qszyk7K.jpg",
+
+  "https://i.imgur.com/WDzmhnY.jpg",
+
+
+  "https://i.imgur.com/UnFjyXZ.jpg",
+
+
+  "https://i.imgur.com/gBt5WtW.jpg",
+
+  "https://i.imgur.com/9WA2frc.jpg",
+  "https://i.imgur.com/KoI0wZd.jpg",
+  "https://i.imgur.com/IFiwQoI.jpg",
+
+];
+
 const PyrTwo = (eventsId) => {
   const [isMobileView, setIsMobileView] = useState(false);
   useEffect(() => {
@@ -45,7 +81,7 @@ const PyrTwo = (eventsId) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://stagi.starclinch.com/book`);
+        const response = await fetch(`${apiUrlClinet}/book`);
         const data = await response.json();
         // const eventId = data.events_data.id;
         setEvents(data.events_data);
@@ -59,28 +95,22 @@ const PyrTwo = (eventsId) => {
     fetchData();
   }, [eventsId]);
 
-  const [images, setImages] = useState([]);
-  useEffect(() => {
-    try {
-      const imagesData = require('./images.json');
-      setImages(imagesData.default || imagesData);
-    } catch (error) {
-      console.error("Error importing images:", error);
-    }
-  }, []);
+
+
 
   return (
     <Fragment>
+      <NavbarOne />
       <MainBox>
         {isMobileView ? (
           <>
             <div class="group-parentMobileCateOne">
-              <div class="frame-parentMobileCateOne">
+              {/* <div class="frame-parentMobileCateOne">
                 <div class="frame-groupMobileCateOne">
                   <div class="image-56-wrapperMobileCateOne">
                     <img
                       class="image-56-iconMobileCateOne"
-                      alt=""
+                      alt="Comedians"
                       src="Image/cate1.png"
                     />
                   </div>
@@ -130,10 +160,10 @@ const PyrTwo = (eventsId) => {
                 <div class="artistsMobileCateOne">
                   Explore our top categories
                 </div>
-              </div>
+              </div> */}
               <div class="frame-parent1MobileCateOne">
                 <div class="all-categories-parentMobileCateOne">
-                  <div class="all-categoriesMobileCateOne">All Categories</div>
+                  <div class="all-categoriesMobileCateOne">Choose Events</div>
                 </div>
               </div>
             </div>
@@ -155,22 +185,29 @@ const PyrTwo = (eventsId) => {
               </Box>
             ) : (
               <Fragment>
-                {events.map((eventOne) => (
+                 
+                {events.map((eventOne, outerIndex) => (
                   <Link
                     style={{ color: "white", textDecoration: "none" }}
-                    href={`/pyr-categories-form-one-step/${eventOne.event_name}`}
+                    href={`/book/details/${eventOne.event_name}`}
                     key={eventOne.id}
                   >
+                   
                     <div class="improvised-all-categoriesCateLineMobileVersion">
                       <div class="frame-parentCateLineMobileVersion">
                         <div class="frame-wrapperCateLineMobileVersion">
                           <div class="image-86-parentCateLineMobileVersion">
-                            <img
-                              class="image-86-iconCateLineMobileVersion"
-                              alt={eventOne.event_name}
-                              src={eventOne.event_name}
-                            />
-
+                            {namesArray.map((name, innerIndex) => (
+                              <div key={innerIndex}>
+                                {innerIndex === outerIndex && (
+                                  <img
+                                    className="image-86-iconCateLineMobileVersion"
+                                    alt={eventOne.event_name}
+                                    src={name}
+                                  />
+                                )}
+                              </div>
+                            ))}
                             <div class="frame-childCateLineMobileVersion"></div>
                             <div class="anchorsCateLineMobileVersion">
                               {eventOne.event_name}
@@ -181,6 +218,7 @@ const PyrTwo = (eventsId) => {
                     </div>
                   </Link>
                 ))}
+
               </Fragment>
             )}
           </>
@@ -189,9 +227,9 @@ const PyrTwo = (eventsId) => {
             <Box className="frame-parentCateTwo">
               <Box className="frame-wrapperCateTwo">
                 <Box className="frame-groupCateTwo">
-                  <Box className="all-categories-parentCateTwo">
-                    <Box className="all-categoriesCateTwo">All Categories</Box>
-                  </Box>
+
+                  <Box className="all-categoriesCateTwo">All Choose Categories</Box>
+
                   <Box className="frame-parent2CateTwo">
                     {loadingPyrTwo ? (
                       <Box className="lds-spinner">
@@ -210,47 +248,38 @@ const PyrTwo = (eventsId) => {
                       </Box>
                     ) : (
                       <div className="OnTheMainLine">
-                        {events.map((eventOne) => (
+                        {events.map((eventOne, index) => (
                           <Link
                             style={{ color: "white", textDecoration: "none" }}
-                            href={`/book/details/${eventOne.event_name}`}
+                            href={`/book/details/${eventOne.id}`}
                             key={eventOne.id}
                           >
                             <Box className="frame-parent2CateTwo">
                               <Box className="frame-wrapper1CateTwo">
                                 <Box className="frame-parent7CateTwo">
                                   <div>
-                                    <Box
-                                      className="rectangle-parent2CateTwo"
-                                      onClick={() => {
-                                        const filteredImages = images.filter((image) => image.id === eventOne.id);
-
-                                        if (filteredImages.length > 0) {
-                                          const filteredImage = filteredImages[0];
-                                          localStorage.setItem("selectedImage", filteredImage.imageUrl);
-                                        }
-                                      }}
-                                    >
-                                      {images
-                                        .filter((image) => image.id === eventOne.id)
-                                        .map((filteredImage) => (
-                                          <React.Fragment key={filteredImage.id}>
-                                            <img
-                                              className="frame-child6CateTwo"
-                                              src={filteredImage.imageUrl}
-                                              alt={filteredImage.eventName}
-                                            />
-                                            <p>{eventOne.event_name}</p>
-                                          </React.Fragment>
-                                        ))}
+                                    <Box className="rectangle-parent2CateTwo">
+                                      {namesArray.map((name, innerIndex) => (
+                                        <div key={innerIndex}>
+                                          {innerIndex === index && (
+                                            <>
+                                              <img
+                                                className="frame-child6CateTwo"
+                                                src={name}
+                                              />
+                                              <p style={{ paddingTop: '15px' }}>{eventOne.event_name}</p>
+                                            </>
+                                          )}
+                                        </div>
+                                      ))}
                                     </Box>
                                   </div>
-                                  <p>{eventOne.event_name}</p>
                                 </Box>
                               </Box>
                             </Box>
                           </Link>
                         ))}
+
                       </div>
                     )}
                   </Box>
@@ -260,6 +289,7 @@ const PyrTwo = (eventsId) => {
           </>
         )}
       </MainBox>
+      <Footer />
     </Fragment>
   );
 };

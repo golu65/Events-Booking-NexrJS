@@ -1,0 +1,6 @@
+User-agent: *
+Sitemap: https://starclinch.com/sitemap.xml
+Sitemap: https://starclinch.com/newartists-sitemap.xml
+
+Disallow: /cart/formtwogtq/
+Disallow: /cart/formtwogtq/*?

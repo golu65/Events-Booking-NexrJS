@@ -4,12 +4,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Box, styled, Modal } from "@mui/material";
 import "./pageFormTwo.css";
-// import "./ProfileCss/ProfileFromThree.css";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import baseURL from "../../apiConfig";
+import apiUrlClinet from "../../../../urlconfig";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MdCall } from "react-icons/md";
+import NavbarOne from "@/app/MainNavbar/NavbarOne";
+import Footer from "@/app/Page/Footer";
 
 const MainBox = styled(Box)`
   padding-top: 150px;
@@ -41,7 +41,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   "@media (max-width: 767px)": {
-    width: 360,
+    width: 418,
   },
 };
 
@@ -59,6 +59,7 @@ const styleOne = {
     left: "85%",
   },
 };
+
 
 const page = (props) => {
   const formData = props.location ? props.location.state : null;
@@ -105,35 +106,64 @@ const page = (props) => {
   // data pass
 
   const artistName = ""
-  const artistProfilePic = ""
+  // const artistProfilePic = ""
   const categoryName = ""
-  
+
   // const artistId = ""
 
   // const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const billing_event_type = searchParams.get("billing_event_type");
-  const billing_event_date = searchParams.get("billing_event_date");
-  const billing_event_budget = searchParams.get("billing_event_budget");
-  const billing_event_gathering_size = searchParams.get(
-    "billing_event_gathering_size"
-  );
-  const billing_event_venue = searchParams.get("billing_event_venue");
-  const artistId =searchParams.get("artistId")
-  useEffect(() => {
-    // console.log("Billing Event Type:", billing_event_type);
-    // console.log("Billing Event Date:", billing_event_date);
-    // console.log("Billing Event Budget:", billing_event_budget);
-    // console.log("Billing Event Gathering Size:", billing_event_gathering_size);
-    // console.log("Billing Event Venue:", billing_event_venue);
-  }, [
-    billing_event_type,
-    billing_event_date,
-    billing_event_budget,
-    billing_event_gathering_size,
-    billing_event_venue,
-    artistId
-  ]);
+  // const searchParams = new URLSearchParams(location.search);
+  // const billing_event_type = searchParams.get("billing_event_type");
+  // const billing_event_date = searchParams.get("billing_event_date");
+  // const billing_event_budget = searchParams.get("billing_event_budget");
+  // const billing_event_gathering_size = searchParams.get(
+  //   "billing_event_gathering_size"
+  // );
+  // const billing_event_venue = searchParams.get("billing_event_venue");
+  // const artistId =searchParams.get("artistId")
+  // useEffect(() => {
+  //   // console.log("Billing Event Type:", billing_event_type);
+  //   // console.log("Billing Event Date:", billing_event_date);
+  //   // console.log("Billing Event Budget:", billing_event_budget);
+  //   // console.log("Billing Event Gathering Size:", billing_event_gathering_size);
+  //   // console.log("Billing Event Venue:", billing_event_venue);
+  // }, [
+  //   billing_event_type,
+  //   billing_event_date,
+  //   billing_event_budget,
+  //   billing_event_gathering_size,
+  //   billing_event_venue,
+  //   artistId
+  // ]);
+
+  // const router = useRouter();
+  // const { artistId, billing_event_type, billing_event_date, billing_event_budget, billing_event_gathering_size, billing_event_venue } = router.query;
+
+  // useEffect(() => {
+  //   console.log("Artist ID:", artistId);
+  //   console.log("Billing Event Type:", billing_event_type);
+  //   console.log("Billing Event Date:", billing_event_date);
+  //   console.log("Billing Event Budget:", billing_event_budget);
+  //   console.log("Billing Event Gathering Size:", billing_event_gathering_size);
+  //   console.log("Billing Event Venue:", billing_event_venue);
+  // }, [artistId, billing_event_type, billing_event_date, billing_event_budget, billing_event_gathering_size, billing_event_venue]);
+
+  // const queryString = window.location.search;
+  // const searchParams = new URLSearchParams(queryString);
+
+  // const billing_event_type = searchParams.get("billing_event_type");
+  // const billing_event_date = searchParams.get("billing_event_date");
+  // const billing_event_budget = searchParams.get("billing_event_budget");
+  // const billing_event_gathering_size = searchParams.get("billing_event_gathering_size");
+  // const billing_event_venue = searchParams.get("billing_event_venue");
+  // const artistId = searchParams.get("artistId");
+  const billing_event_type = ''
+  const billing_event_date = ''
+  const billing_event_budget = ''
+  const billing_event_gathering_size = ''
+  const billing_event_venue = ''
+  const artistId = ''
+
 
   const [formDataOne, setFormDataOne] = useState({
     billing_event_type: billing_event_type,
@@ -150,14 +180,46 @@ const page = (props) => {
     artiistId: artistId,
   });
 
-  const [loadingFormLoader, setLoadingFormLoader] = useState(false);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      // Use the client-side code only if running in the browser
+      if (process.browser) {
+        // const queryString = window.location.search;
+        // const searchParams = new URLSearchParams(queryString);
+        const searchParams = new URLSearchParams(location.search);
+
+        const billing_event_type = searchParams.get("billing_event_type");
+        const billing_event_date = searchParams.get("billing_event_date");
+        const billing_event_budget = searchParams.get("billing_event_budget");
+        const billing_event_gathering_size = searchParams.get("billing_event_gathering_size");
+        const billing_event_venue = searchParams.get("billing_event_venue");
+        const artistId = searchParams.get("artistId");
+
+        setFormDataOne((prevFormData) => ({
+          ...prevFormData,
+          billing_event_type,
+          billing_event_date,
+          billing_event_budget,
+          billing_event_gathering_size,
+          billing_event_venue,
+          artiistId: artistId,
+        }));
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const [loadingFormLoader, setLoadingFormLoader] = useState(false);
+  // const artistProfilePic = localStorage.getItem("profile_pic");
+  const artistProfilePic = ''
 
   const handleFormSubmit = async (e) => {
     console.log("Form Data:", formDataOne);
     setLoadingFormLoader(true);
     try {
-      const response = await fetch("https://stagi.starclinch.com/cart/checkout/complete/", {
+      const response = await fetch(`${apiUrlClinet}/cart/checkout/complete/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -170,9 +232,11 @@ const page = (props) => {
         // If successful, navigate to "/thankyou"
         // setResponseData(responseData);
         // setSharedState({ id: responseData.id, email: responseData.email, typeform: responseData.typeform });
-        localStorage.setItem('sharedData', JSON.stringify({ id: responseData.id, email: responseData.email, typeform: responseData.typeform }));
+        // localStorage.setItem('sharedData', JSON.stringify({ id: responseData.id, email: responseData.email, typeform: responseData.typeform }));
         console.log(responseData)
-        navigationgtq(`/order/thanks/${responseData.id}`);
+        // navigationgtq(`/ThankOne/${responseData.id}`);
+        window.location.href = `/cart/thanks/${responseData.order_id}`;
+
       } else {
         // Handle errors or display appropriate messages
         console.error("Error submitting form:", responseData.error);
@@ -266,7 +330,7 @@ const page = (props) => {
     if (value.match(/^\d*$/)) {
       const updatedOtp = [...otpValue];
       updatedOtp[index] = value;
-      // console.log("Updated Otp:", updatedOtp);
+      console.log("Updated Otp:", updatedOtp);
       setOtpValue(updatedOtp);
       handleOtpChange(updatedOtp);
     }
@@ -276,7 +340,7 @@ const page = (props) => {
     if (e.key === "Backspace" && !otpValue[index] && index > 0) {
       const updatedOtp = [...otpValue];
       updatedOtp[index - 1] = "";
-      // console.log("Updated Otp (Backspace):", updatedOtp);
+      console.log("Updated Otp (Backspace):", updatedOtp);
       setOtpValue(updatedOtp);
     }
   };
@@ -292,7 +356,7 @@ const page = (props) => {
         type: "gtq",
       };
 
-      const response = await fetch("https://stagi.starclinch.com/cart/otp/", {
+      const response = await fetch(`${apiUrlClinet}/cart/otp/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -323,13 +387,14 @@ const page = (props) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleVerification = async (e) => {
+    // alert('kjbgjdfv')
     try {
       if (otpValue.join("") === "") {
         setOtpError(true);
         setErrorMessage("Please enter the OTP.");
         return;
       }
-      const verifyResponse = await fetch("https://stagi.starclinch.com/cart/otp/verify/", {
+      const verifyResponse = await fetch(`${apiUrlClinet}/cart/otp/verify/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -347,14 +412,14 @@ const page = (props) => {
       }
 
       const verifyData = await verifyResponse.json();
-      // console.log("Verification API Response:", verifyData);
+      console.log("Verification API Response:", verifyData);
 
       if (verifyData.success) {
-        // console.log(verifyData);
+        console.log(verifyData);
         const isSuccess = verifyData.success.toLowerCase() === "true";
         if (isSuccess) {
           e.preventDefault();
-          // console.log("Verification successful");
+          console.log("Verification successful");
           setOtpError(false);
           setErrorMessage("");
           handleFormSubmit();
@@ -380,7 +445,7 @@ const page = (props) => {
         });
         return;
       }
-      const response = await fetch("https://stagi.starclinch.com/truecaller_api", {
+      const response = await fetch(`${apiUrlClinet}/truecaller_api`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -427,7 +492,7 @@ const page = (props) => {
   }, [timerInterval]);
 
   const handleSendOTP = async (method) => {
-    const apiUrl = "https://stagi.starclinch.com/cart/otp/resend/";
+    const apiUrl = `${apiUrlClinet}/cart/otp/resend/`;
 
     const jsonData = {
       mobile: formDataOne.billing_phone,
@@ -453,6 +518,7 @@ const page = (props) => {
 
   return (
     <MainBox>
+      <NavbarOne />
       {isMobileView ? (
         <>
           <>
@@ -686,24 +752,17 @@ const page = (props) => {
                                             <input
                                               key={index}
                                               type="text"
-                                              maxLength="1"
+                                              maxLength="4"
                                               id={`otp-input-${index}`}
                                               style={{
+                                                color: 'white',
                                                 outline: "block",
-                                                borderColor: otpValue[index]
-                                                  ? otpValue[index].length === 2
-                                                    ? otpError
-                                                      ? "red"
-                                                      : "green"
-                                                    : ""
-                                                  : "",
-                                                color: 'white'
+                                                border: '1px solid white',
+                                                textAlign: 'center'
                                               }}
-                                              className="frame-wrapperMobileGTQOTP"
+                                              className="frame-wrapperFormOTP"
                                               value={otpValue[index] || ""}
-                                              onChange={(e) =>
-                                                handleChange(e, index)
-                                              }
+                                              onChange={(e) => handleChange(e, index)}
                                               onKeyPress={(e) =>
                                                 handleKeyPress(e, index)
                                               }
@@ -737,30 +796,28 @@ const page = (props) => {
                                           Resend with:
                                         </Box>
                                         <Box className="logoswhatsapp-icon-parentMobileGTQOTP">
-                                          <img
+                                          <FaWhatsapp
                                             className="logoswhatsapp-iconMobileGTQOTP"
-                                            alt=""
-                                            src="Image/otp1.svg"
+                                       
                                             onClick={() =>
                                               handleSendOTP("whatsapp")
                                             }
                                             style={{ cursor: "pointer" }}
                                           />
 
-                                          <img
+                                          <MdEmail
                                             className="logoswhatsapp-iconMobileGTQOTP"
-                                            alt=""
-                                            src="Image/otp2.svg"
+                                        
+                                      
                                             onClick={() =>
                                               handleSendOTP("email")
                                             }
                                             style={{ cursor: "pointer" }}
                                           />
 
-                                          <img
+                                          <MdCall
                                             className="logoswhatsapp-iconMobileGTQOTP"
-                                            alt=""
-                                            src="Image/otp3.svg"
+                                           
                                             onClick={() =>
                                               handleSendOTP("mobile")
                                             }
@@ -1078,10 +1135,10 @@ const page = (props) => {
                                       maxLength="4"
                                       id={`otp-input-${index}`}
                                       style={{
-                                        color:'white',
+                                        color: 'white',
                                         outline: "block",
-                                        border:'1px solid white',
-                                        textAlign:'center'
+                                        border: '1px solid white',
+                                        textAlign: 'center'
                                       }}
                                       className="frame-wrapperFormOTP"
                                       value={otpValue[index] || ""}
@@ -1160,7 +1217,7 @@ const page = (props) => {
                                   handleOpenLoader(); // Call handleOpenLoader before
                                   handleVerification(e);
                                 }}
-                                style={{ fontSize: "18px" , cursor:'pointer'}}
+                                style={{ fontSize: "18px", cursor: 'pointer' }}
                               >
                                 Verify OTP --&gt;
                               </Box>
@@ -1195,6 +1252,7 @@ const page = (props) => {
           </Box>
         </>
       )}
+      <Footer />
     </MainBox>
   );
 };

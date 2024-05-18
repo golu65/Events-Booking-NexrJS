@@ -3,6 +3,7 @@ import { Drawer, IconButton, Box } from "@mui/material";
 import React, { Fragment, useState, useEffect, useRef } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./NavbarOneServer.css";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Link from "next/link";
 // import baseURL from "../../apiConfig";
 
@@ -58,10 +59,9 @@ const DrawerCmpo = () => {
                 onClick={handleBoxClick}
               >
                 <Box className="celebrityMobileDropDownNavbar">Celebrity</Box>
-                <img
+                <ExpandMoreIcon
                   className="eparrow-down-iconMobileDropDownNavbar"
-                  alt=""
-                  src="Image/mobiledropdown.png"
+            
                 />
               </Box>
               {isTextVisible && (
@@ -427,10 +427,9 @@ const DrawerCmpo = () => {
                 <Box className="dancersMobileDropDownNavbar">
                   Join Community
                 </Box>
-                <img
+                <ExpandMoreIcon
                   className="eparrow-down-icon1MobileDropDownNavbar"
-                  alt=""
-                  src="Image/mobiledropdown.png"
+              
                 />
               </Box>
 

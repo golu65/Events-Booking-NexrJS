@@ -156,22 +156,22 @@ const NavbarOneServer = ({ categories }) => {
                     className="categories-container"
                     style={{ width: "50%", marginLeft: "auto" }}
                   >
-                    <Box className="category-box">
+                     <Box className="category-box">
                       <Link href="/book-anchor-online">
                         <div className=""> Anchor/Emcee</div>
                       </Link>
                     </Box>
-                    <Box className="category-box">
+                   <Box className="category-box">
                       <Link href="/book-comedian-online">
                         <div className=""> Comedian</div>
                       </Link>
                     </Box>
-                    <Box className="category-box">
+                     <Box className="category-box">
                       <Link href="/book-dj-online">
                         <div className="">Dj</div>
                       </Link>
                     </Box>
-                    <Box className="category-box">
+                   <Box className="category-box">
                       <Link href="/book-band-online">
                         <div className="">Live Band</div>
                       </Link>
@@ -226,12 +226,12 @@ const NavbarOneServer = ({ categories }) => {
                       <Link href="/book-variety-artist-online">
                         <div className="">Variety Artist</div>
                       </Link>
-                    </Box>
+                    </Box> 
                   </Box>
                 </Menu>
                 <Button
                   color="inherit"
-                  onClick={handleOpen}
+                  // onClick={handleOpen}
                   style={{
                     color: "#FFF",
                     fontFamily: "Haffer SQ TRIAL",
@@ -242,18 +242,18 @@ const NavbarOneServer = ({ categories }) => {
                     textTransform: "capitalize",
                   }}
                 >
-                  Join Community
+                  {/* Join Community */}
                   {/* <KeyboardArrowDownIcon style={{ fontSize: "35px" }} /> */}
                 </Button>
-                <Dialog open={open} onClose={handleClose}>
+                {/* <Dialog open={open} onClose={handleClose}>
                   <Typography>hello</Typography>
-                </Dialog>
+                </Dialog> */}
                 <Link href="/book">
                   <Button
                     color="inherit"
                     style={{
                       background:
-                        "var(--new-bright, linear-gradient(133deg, rgba(255, 253, 253, 0.36) -5.44%, rgba(255, 227, 226, 0.80) -5.44%, rgba(241, 102, 51, 0.80) 26.17%, rgba(253, 45, 125, 0.80) 64.16%, rgba(21, 18, 18, 0.80) 101.18%))",
+                        "var(--new-bright, linear-gradient(133deg, rgba(255, 253, 253, 0.36) -5.44%, rgba(255, 227, 226, 0.80) -5.44%, rgba(241, 102, 51, 0.80) 26.17%, rgba(253, 45, 125, 0.80) 64.16%, rgb(187 4 4 / 123%) 101.18%))",
                       fontFamily: "Haffer SQ TRIAL",
                       fontSize: "18px",
                       fontStyle: "normal",
